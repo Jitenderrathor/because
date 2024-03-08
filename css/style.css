@@ -49,6 +49,9 @@ body {
     color: #222;
     font-size: 1.6rem;
 } */
+body{
+    overflow-x: hidden;
+}
 .container-xxl{
     max-width: 1440px !important;
 }
@@ -62,6 +65,7 @@ a {
     font-size: 180px;
     font-weight: 400;
     line-height: 100%;
+    overflow: hidden;
 }
 
 .h1 .h1-light {
@@ -116,8 +120,8 @@ a {
 }
 
 .navbar {
-    width: calc(100%-60px);
-    padding: 20px 30px;
+    width: calc(100%);
+    padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -276,4 +280,37 @@ padding: 100px 0;
 /* ------------- Write to us Scetion End ------------- */
 
 /* Footer Scetion Start ------------------------------ */
+footer .foot-menu{
+    overflow: hidden;
+}
+footer .f-text{
+    font-size: var(--font-family);
+    font-size: 80px;
+    /* font-weight: 400; */
+    color: var(--th-color-2);
+    line-height: 140%;
+    text-transform: uppercase;
+    border-top: 3px solid var(--th-color-1);
+    border-bottom: 3px solid var(--th-color-1);
+    /* padding: 4px 0; */
+}
+footer .f-text .fas{
+    font-size: 12px;
+    margin: 0 30px;
+}
+.foot-up{
+    text-align: center;
+    padding: 50px 0 20px;
+}
+.foot-up .fal{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 34px;
+    text-align: center;
+    border: 2px solid var(--th-color-2);
+    border-radius: 50%;
+    margin:0px auto 40px;
+}
 /* ------------- Footer Scetion End ------------- */
+
