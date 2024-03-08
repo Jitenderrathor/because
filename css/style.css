@@ -26,8 +26,7 @@ Spacing System
 
 
 /* 01. Google Font Start ------------------------------ */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* ------------- Google Font End ------------- */
 
@@ -35,91 +34,246 @@ Spacing System
 /* 02.base Start ------------------------------ */
 
 :root {
-    --primary: ;
-    --secondary: ;
-    --font-family1: ;
-    --font-family2: ;
+    --th-color-1: #3157A7;
+    --th-color-2: #020202;
+    --th-color-3: #7E7E7E;
+    --th-color-4: #545454;
+    --font-family: "Red Hat Display", sans-serif;
 }
 
-html {
+/* html {
     font-size: 62.5%;
 }
 
 body {
     color: #222;
     font-size: 1.6rem;
+} */
+.container-xxl{
+    max-width: 1440px !important;
 }
-
-.text-font {
-    font-family: '', sans-serif;
-}
-
-.text-primary {
-    color: var(--primary);
-}
-
-.text-secondary {
-    color: var(--secondary);
-}
-
-.bg-primary {
-    background-color: var(--primary);
-}
-
-.bg-secondary {
-    background-color: var(--secondary);
-}
-
 a {
     text-decoration: none;
     color: #222;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    letter-spacing: -1px;
-    line-height: 1.2;
-}
-
-p {
-    font-size: 1.8rem;
+.h1 {
+    font-family: var(--font-family);
+    font-size: 180px;
     font-weight: 400;
+    line-height: 100%;
+}
+
+.h1 .h1-light {
+    text-align: left;
+    margin-right: 130px;
+}
+
+.h1 .h1-black {
+    text-align: right;
+    /* font-weight: 600; */
+    margin-left: 130px;
+}
+.th-p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+}
+.h3{
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.th-btn{
+    font-family: var(--font-family);
+    /* display: block; */
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 10px ;
+    border-radius: 20px;
+    border: 1px solid var(--th-color-4);
 }
 
 
-/* Scroll Bar style start */
-
-::-webkit-scrollbar {
-    /* width */
-    /* width: 10px; */
+.th-btn .far{
+    font-size: 16px;
 }
-
-::-webkit-scrollbar:hover {
-    /* width: 50px; */
+.row{
+    padding: 0px !important;
 }
-
- ::-webkit-scrollbar-track {
-    /* Track */
-    /* background-color: ; */
-}
-
- ::-webkit-scrollbar-thumb {
-    /* Handle */
-    /* background-color: ; */
-}
-
-
-/* Scroll Bar style End */
-
-
 /* ------------- base End ------------- */
 
 
-/* 04. Scetion Start ------------------------------ */
+/* Header Scetion Start ------------------------------ */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar {
+    width: calc(100%-60px);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    max-width: 200px;
+    width: 100%;
+}
+
+.nav-logo img {
+    width: 100%;
+}
+
+.nav-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid 2px var(--th-color-4);
+    position: relative;
+    transition: all .5s;
+}
+
+.nav-toggle::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    /* transform: translateX(50%); */
+    width: 60%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--th-color-4);
+}
+
+.nav-toggle::before {
+    content: " ";
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    /* transform: translateX(50%); */
+    width: 70%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--th-color-4);
+}
+
+/* .nav-toggle:hover{
+
+} */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--th-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-container ul li {
+    margin: 10px 0px;
+}
+
+.nav-container ul li a {
+    font-size: var(--font-family);
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* ------------- Header Scetion  End ------------- */
+
+/* Banner Scetion Start ------------------------------ */
+.banner {
+    margin-top: 40px;
+    padding: 100px 0px;
+}
+.banner .h1 {
+    color: var(--th-color-1);
+}
 
 
-/* -------------  Scetion  End ------------- */
+/* ------------- Banner Scetion  End ------------- */
+
+
+/* Specialize Scetion Start ------------------------------ */
+.specialize{
+    padding: 80px 0 100px 0;
+    background-image: linear-gradient(rgba(253, 218, 22, 0.0), rgba(253, 218, 22, 0.6), rgba(253, 218, 22, 0.0));
+}
+.specialize .far{
+    font-size: 32px;
+}
+.specialize .th-p.ltb {
+    display: block;
+    margin:  0 0 120px 0  !important;
+    /* line-height: 200px; */
+}
+/* ------------- Specialize Scetion  End ------------- */
+
+
+/* Specialize Scetion Start ------------------------------ */
+.ow-text{
+    padding: 40px;
+}
+.ow-text .h3:first-child{
+    font-weight: 500;
+color: var(--th-color-3);
+}
+.ow-btn{
+    margin-top: 150px;
+}
+/* ------------- Specialize Scetion  End ------------- */
+
+/* Our Project Scetion Start ------------------------------ */
+.our-project{
+    padding: 100px 0;
+}
+
+.our-project .h3{
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--th-color-4);
+    max-width: 450px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+/* ------------- Our Project Scetion End ------------- */
+
+
+/* Write to us Scetion Start ------------------------------ */
+.write-to-us{
+padding: 100px 0;
+}
+.write-to-us input{
+    width: 100%;
+    border: none;
+    border-bottom:2px solid var(--th-color-4);
+    padding: 10px 0px;
+}
+.write-to-us .th-btn{
+    background-color: transparent;
+}
+.write-to-us .th-btn .far{
+    transform: rotate(-45deg);
+}
+/* ------------- Write to us Scetion End ------------- */
+
+/* Footer Scetion Start ------------------------------ */
+/* ------------- Footer Scetion End ------------- */
