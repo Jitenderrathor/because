@@ -2,11 +2,11 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
-    $phone = $_POST["phone"];
+    $company = $_POST["company"];
     $message = $_POST["message"];
     
     // Validate input (you can add more validation if required)
-    if (empty($name) || empty($email) || empty($phone) || empty($message)) {
+    if (empty($name) || empty($email) || empty($company) || empty($message)) {
         echo "Please fill in all the fields.";
         exit;
     }
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Build the email content
     $email_content = "Name: $name\n";
     $email_content .= "Email: $email\n";
-    $email_content .= "Phone: $phone\n";
+    $email_content .= "Company: $company\n";
     $email_content .= "Message:\n$message";
     
     // Set the email headers
