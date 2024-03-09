@@ -83,7 +83,7 @@
     <section class="specialize">
         <div class="container-xxl">
 
-            <div class="row justify-content-between align-items-start pb-5 mb-5">
+            <div class="row justify-content-between align-items-start pb-md-5 mb-md-5">
                 <div class="col-lg-7">
                     <div class="specialize-left">
                         <div class="h3">
@@ -424,7 +424,7 @@
 
     <script>
          const bannerTl = gsap.timeline();
-        let bannerSplitText = new SplitType(".banner .h1", { type: "chars,words" });
+        let bannerSplitText = new SplitType(".banner .h1", { type: "chars, words" });
         let bannerChars = bannerSplitText.chars;
         bannerTl.from(bannerChars, {
             yPercent: 130,

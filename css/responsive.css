@@ -105,7 +105,26 @@
     .banner {
         padding-bottom: 40px;
     }
+    .container-xxl{
+        padding: 10px;
+    }
+    
+    .h1 .h1-light {
+        margin-right: 30px;
+    }
 
+    .h1 .h1-black {
+        margin-left: 30px;
+    }
+    .mouse-icon {
+        margin: 100px 0 0 0;
+    }
+.our-project{
+    padding: 80px 0 40px;
+}
+footer .f-text {
+    font-size: 60px;
+}
 }
 
 
