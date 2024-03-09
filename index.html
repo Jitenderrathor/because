@@ -99,15 +99,17 @@
                 </div>
                 <div class="col-sm-9 col-md-7 col-lg-4 my-4 my-lg-0">
                     <div class="specialize-right d-flex flex-column align-items-start align-items-lg-center">
-                        <div class="sr-t d-flex align-items-center gap-2">
+                        <div class="sr-t sr-t-1 d-flex align-items-center gap-2">
                             <div class="h3">Strategy and Branding</div>
                             <i class="far fa-arrow-circle-right"></i>
                         </div>
+                        <div class="th-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptate sed totam harum pariatur architecto, veniam esse maxime. Corporis, fugiat.</div>
                         <hr class="sr-t w-100 w-lg-75" />
                         <div class="sr-t d-flex align-items-center gap-2">
                             <div class="h3">Web and Development</div>
                             <i class="far fa-arrow-circle-right"></i>
                         </div>
+                        <div class="th-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptate sed totam harum pariatur architecto, veniam esse maxime. Corporis, fugiat.</div>
                     </div>
                 </div>
             </div>
@@ -351,6 +353,11 @@
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
     <script>
+        $(".sr-t+.th-p").slideUp()
+        $(".sr-t").click(function(){
+            $(this).toggleClass("active");
+            $(this).next().slideToggle();
+        })
          $(document).ready(function () {
       var lastScrollTop = 0;
 

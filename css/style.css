@@ -313,13 +313,13 @@ a {
   }
 @keyframes moveArrow {
     0% {
-      transform: translateX(0);
+      transform: translateY(0) rotate(90deg);
     }
     50% {
-      transform: translateX(50%);
+      transform: translateY(10%) rotate(90deg);
     }
     100% {
-      transform: translateX(0);
+      transform: translateY(0) rotate(90deg);
     }
   }
 .specialize {
@@ -344,13 +344,24 @@ a {
     margin: 0 0 120px 0 !important;
     /* line-height: 200px; */
 }
+.specialize-right .d-flex.align-items-center.gap-2{
+    cursor: pointer;
+}
 .specialize-right .far{
+    transform: rotate(90deg);
    transition: all .5s;
 }
 .specialize-right .d-flex.align-items-center.gap-2:hover .far{
-    animation: moveArrow 1.5s infinite;
+    transform: translateY(4px) rotate(90deg);
 
 }
+.specialize-right .d-flex.align-items-center.gap-2.active:hover .far{
+    animation: none;
+   }
+.specialize-right .d-flex.align-items-center.gap-2.active .far{
+   transform: rotate(-270deg);
+}
+
 /* ------------- Specialize Scetion  End ------------- */
 
 
