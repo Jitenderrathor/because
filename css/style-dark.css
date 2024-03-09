@@ -1,0 +1,62 @@
+:root {
+  --th-color-1: #3157a7;
+  --th-color-2: #020202;
+  --th-color-3: #7e7e7e;
+  --th-color-4: #545454;
+  --th-color-5: #ffffff;
+  --font-family: "Red Hat Display", sans-serif;
+}
+body.dark {
+  background-color: var(--th-color-2);
+}
+
+body.dark .th-mode,
+body.dark .ntb,
+body.dark .th-btn::before,
+body.dark .nav-container {
+  background-color: var(--th-color-5);
+}
+body.dark .th-mode .ball,
+body.dark #header,
+body.dark .navbar.active .ntb-t,
+body.dark .navbar.active .ntb-b {
+  background-color: var(--th-color-2);
+}
+body.dark .nav-container ul li a, 
+body.dark .th-btn:hover {
+  color: var(--th-color-2);
+}
+
+body.dark .specialize {
+  background-image: linear-gradient(
+    rgba(253, 218, 22, 0),
+    rgb(89, 213, 224, 0.6),
+    rgba(253, 218, 22, 0)
+  );
+}
+
+body.dark .h3,
+body.dark .our-work .h1,
+body.dark .write-to-us .h1,
+body.dark .write-to-us input::placeholder,
+body.dark .foot-up .fal,
+body.dark footer .f-text a,
+body.dark footer .f-text .fas,
+body.dark .specialize .far {
+  color: var(--th-color-5);
+}
+body.dark .th-btn,
+body.dark .th-p {
+  color: #ecf0f1;
+}
+body.dark .specialize hr {
+  color: #e5e7e9;
+}
+body.dark .foot-up .fal{
+    border: 2px solid #ecf0f1;
+
+}
+body.dark .write-to-us input {
+    background-color: transparent;
+    border-bottom: 2px solid #ecf0f1;
+}
