@@ -166,6 +166,10 @@ a {
     left: 0;
     z-index: 1000;
     width: 100%;
+    transition: all .5s;
+}
+#header.hidden{
+    transform: translateY(-100%);
 }
 
 .navbar {
@@ -383,7 +387,11 @@ a {
 .op-row {
     height: 500px;
 }
-
+.op-container{
+    width: 400%;
+    display: flex;
+    flex-wrap: nowrap;
+}
 /* .op-img{
     --spating:400px;
     position: absolute;

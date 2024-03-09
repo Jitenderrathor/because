@@ -40,11 +40,11 @@
                 </div>
                 <div class="nav-container">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Service</a></li>
-                        <li><a href="">Project</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     <div class="my-5"></div>
                     <div class="my-5"></div> -->
                     <div class="mouse-icon">
-                        <i class="fal fa-mouse-alt mb-5"></i>
+                        <a href="#specialize"><i class="fal fa-mouse-alt mb-5"></i></a>
                     </div>
                     <!-- <a href="" class="th-p ltb">Scroll to explore </a> -->
                 </div>
@@ -80,7 +80,7 @@
     <!-- Banner Section End -->
 
     <!-- our specialize Section Start -->
-    <section class="specialize">
+    <section class="specialize" id="specialize">
         <div class="container-xxl">
 
             <div class="row justify-content-between align-items-start pb-md-5 mb-md-5">
@@ -169,15 +169,50 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6 col-md-4 mt-3">
-                    <img src="image/project-1.jpg" class="w-100" alt="" />
+            <div class="op-container">
+                <div class="row w-100">
+                    <div class="col-4 mt-3">
+                        <img src="image/project-1.jpg" class="w-100" alt="" />
+                    </div>
+                    <div class="col-4 mt-3">
+                        <img src="image/project-2.jpg" class="w-100" alt="" />
+                    </div>
+                    <div class="col-4 mt-3">
+                        <img src="image/project-3.jpg" class="w-100" alt="" />
+                    </div>
                 </div>
-                <div class="col-6 col-md-4 mt-3">
-                    <img src="image/project-2.jpg" class="w-100" alt="" />
+                <div class="row w-100">
+                    <div class="col-4 mt-3">
+                        <img src="image/project-1.jpg" class="w-100" alt="" />
+                    </div>
+                    <div class="col-4 mt-3">
+                        <img src="image/project-2.jpg" class="w-100" alt="" />
+                    </div>
+                    <div class="col-4 mt-3">
+                        <img src="image/project-3.jpg" class="w-100" alt="" />
+                    </div>
                 </div>
-                <div class="col-6 col-md-4 mt-3">
-                    <img src="image/project-3.jpg" class="w-100" alt="" />
+                <div class="row w-100">
+                    <div class="col-4 mt-3">
+                        <img src="image/project-1.jpg" class="w-100" alt="" />
+                    </div>
+                    <div class="col-4 mt-3">
+                        <img src="image/project-2.jpg" class="w-100" alt="" />
+                    </div>
+                    <div class="col-4 mt-3">
+                        <img src="image/project-3.jpg" class="w-100" alt="" />
+                    </div>
+                </div>
+                <div class="row w-100">
+                    <div class="col-4 mt-3">
+                        <img src="image/project-1.jpg" class="w-100" alt="" />
+                    </div>
+                    <div class="col-4 mt-3">
+                        <img src="image/project-2.jpg" class="w-100" alt="" />
+                    </div>
+                    <div class="col-4 mt-3">
+                        <img src="image/project-3.jpg" class="w-100" alt="" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -291,10 +326,10 @@
                 <i class="fas fa-circle"></i><a href="#">SERVICE</a>
                 <i class="fas fa-circle"></i><a href="#">CONTACT</a>
             </marquee>
-            
+
         </div>
         <div class="foot-up">
-           <a href="#"> <i class="fal fa-arrow-up"></i></a>
+            <a href="#"> <i class="fal fa-arrow-up"></i></a>
 
             <div class="th-p">All rights reserved by Because</div>
         </div>
@@ -316,9 +351,28 @@
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
     <script>
-   $('.foot-up .fal').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
+         $(document).ready(function () {
+      var lastScrollTop = 0;
+
+      $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down
+          $('header').addClass('hidden');
+        } else {
+          // Scrolling to the top
+          $('header').removeClass('hidden');
+        }
+
+        lastScrollTop = scrollTop;
       });
+    });
+    </script>
+    <script>
+        $('.foot-up .fal').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
         gsap.registerPlugin(ScrollTrigger);
     </script>
     <script>
@@ -421,9 +475,27 @@
              }); */
         });
     </script>
-
     <script>
-         const bannerTl = gsap.timeline();
+        gsap.registerPlugin(ScrollTrigger);
+
+        let sections = gsap.utils.toArray(".op-container .row");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".our-project",
+                pin: true,
+                scrub: 1,
+                snap: 1 / (sections.length - 1),
+                end: () => "+=" + document.querySelector(".our-project").offsetWidth
+            }
+        });
+
+
+    </script>
+    <script>
+        const bannerTl = gsap.timeline();
         let bannerSplitText = new SplitType(".banner .h1", { type: "chars, words" });
         let bannerChars = bannerSplitText.chars;
         bannerTl.from(bannerChars, {
@@ -441,7 +513,7 @@
             ease: "back.out",
             duration: 1,
         });
-       
+
         gsap.to(".banner .h1-light", 2, {
             x: "-150vh",
             stagger: 0.05,
@@ -505,7 +577,7 @@
     </script>
 
     <script>
-       
+
         let mySplitText = new SplitType(".our-work .h1", { type: "chars,words" });
         let chars = mySplitText.chars;
         gsap.from(chars, {
@@ -554,11 +626,11 @@
         //         // markers: true
         //     }
         // });
-        
+
         gsap.from(".ow-img", {
             opacity: 0,
             x: "-150%",
-            delay:.5,
+            delay: .5,
 
             stagger: 0.2, // Adjust as needed
             scrollTrigger: {
@@ -572,7 +644,7 @@
             y: 150,
             opacity: 0,
             stagger: 0.2, // Adjust as needed
-            delay:.5,
+            delay: .5,
             scrollTrigger: {
                 trigger: ".our-work",
                 start: "top 20%", // Adjust as needed
@@ -584,7 +656,7 @@
             y: 150,
             opacity: 0,
             stagger: 0.2, // Adjust as needed
-            delay:1,
+            delay: 1,
             scrollTrigger: {
                 trigger: ".our-work",
                 start: "top 20%", // Adjust as needed
@@ -596,7 +668,7 @@
             x: 150,
             opacity: 0,
             stagger: 0.2, // Adjust as needed
-            delay:1,
+            delay: 1,
             scrollTrigger: {
                 trigger: ".our-work",
                 start: "top 20%", // Adjust as needed
@@ -604,20 +676,20 @@
                 // scrub: true,
             },
         });
-        
-        gsap.from(".our-project .h3", {
-            scale: 2,
-            opacity: 0,
-            stagger: 0.05,
-            ease: "back.out",
-            duration: 1,
-            scrollTrigger: {
-                trigger: ".our-project",
-                start: "top 20%", // Adjust as needed
-                // end: "bottom 60%", // Adjust as needed
-                // scrub: true,
-            },
-        });
+
+        // gsap.from(".our-project .h3", {
+        //     y: 200,
+        //     opacity: 0,
+        //     stagger: 0.05,
+        //     ease: "back.out",
+        //     duration: 1,
+        //     scrollTrigger: {
+        //         trigger: ".our-project",
+        //         start: "top 20%", // Adjust as needed
+        //         // end: "bottom 60%", // Adjust as needed
+        //         // scrub: true,
+        //     },
+        // });
         gsap.from(".our-project .row .col-6", {
             opacity: 0,
             x: "150%",
@@ -655,8 +727,8 @@
                 // scrub: true,
             },
         });
-        
-        
+
+
     </script>
 </body>
 
