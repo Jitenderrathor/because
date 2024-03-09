@@ -64,6 +64,17 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-10 text-center">
+                    <!-- <div class="my-5"></div>
+                    <div class="my-5"></div>
+                    <div class="my-5"></div> -->
+                    <div class="mouse-icon">
+                        <i class="fal fa-mouse-alt mb-5"></i>
+                    </div>
+                    <!-- <a href="" class="th-p ltb">Scroll to explore </a> -->
+                </div>
+            </div>
         </div>
     </section>
     <!-- Banner Section End -->
@@ -71,12 +82,8 @@
     <!-- our specialize Section Start -->
     <section class="specialize">
         <div class="container-xxl">
-            <div class="row justify-content-center">
-                <div class="col-10 text-center">
-                    <a href="" class="th-p ltb">Scroll to explore </a>
-                </div>
-            </div>
-            <div class="row justify-content-between pb-5 mb-5">
+
+            <div class="row justify-content-between align-items-start pb-5 mb-5">
                 <div class="col-lg-7">
                     <div class="specialize-left">
                         <div class="h3">
@@ -90,14 +97,14 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-9 col-md-7 col-lg-4 my-4 my-lg-auto">
+                <div class="col-sm-9 col-md-7 col-lg-4 my-4 my-lg-0">
                     <div class="specialize-right d-flex flex-column align-items-start align-items-lg-center">
-                        <div class="d-flex align-items-center gap-2">
+                        <div class="sr-t d-flex align-items-center gap-2">
                             <div class="h3">Strategy and Branding</div>
                             <i class="far fa-arrow-circle-right"></i>
                         </div>
-                        <hr class="w-100 w-lg-75" />
-                        <div class="d-flex align-items-center gap-2">
+                        <hr class="sr-t w-100 w-lg-75" />
+                        <div class="sr-t d-flex align-items-center gap-2">
                             <div class="h3">Web and Development</div>
                             <i class="far fa-arrow-circle-right"></i>
                         </div>
@@ -105,6 +112,9 @@
                 </div>
             </div>
         </div>
+        <script>
+
+        </script>
     </section>
     <!-- our specialize Section End -->
 
@@ -196,7 +206,7 @@
             <div class="row justify-content-center">
                 <div class="col-11 col-sm-8 col-lg-5">
                     <form action="" method="post">
-                        <div class="row">
+                        <div class="row f-input">
                             <div class="col-12 mt-4">
                                 <input type="text" name="name" class="form-control" placeholder="Full name" id="" />
                             </div>
@@ -239,6 +249,16 @@
                 <div class="">SERVICE</div>
                 <i class="fas fa-circle"></i>
                 <div class="">CONTACT</div>
+                <i class="fas fa-circle"></i>
+                <div class="">HOME</div>
+                <i class="fas fa-circle"></i>
+                <div class="">ABOUT</div>
+                <i class="fas fa-circle"></i>
+                <div class="">PROJECT</div>
+                <i class="fas fa-circle"></i>
+                <div class="">SERVICE</div>
+                <i class="fas fa-circle"></i>
+                <div class="">CONTACT</div>
             </div>
         </div>
         <div class="foot-up">
@@ -259,7 +279,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script> -->
+    <script src="https://unpkg.com/split-type"></script>
 
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
@@ -272,64 +292,12 @@
     <script>
         $(document).ready(function () {
             // Initial animation
-            gsap.set("#header .nav-container", { y: "-200vh" });
+            // gsap.set("#header .nav-container", { y: "-200vh" });
             // gsap.set("#header .nav-container li", { x: "0", opacity: 1 });
             $(".nav-toggle-btn").on("click", function () {
-    if (!$("#header .navbar").hasClass("active")) {
-        $("#header .navbar").addClass("active");
-
-        gsap.to("#header .nav-container", {
-            y: "0vh",
-            opacity: 1,
-            stagger: 0.05,
-            ease: "power4.out",
-            duration: 1,
-        });
-
-        // Create a new timeline for the list items animation
-        const listItemsAnimation = gsap.timeline();
-        listItemsAnimation.from("#header .nav-container li", {
-            xPercent: 150,
-            opacity: 0,
-            stagger: 0.05,
-            delay: 0.5,
-            ease: "back.out",
-            duration: 0.5,
-        });
-
-    } else {
-        $("#header .navbar").removeClass("active");
-
-        // Clear the previous animations from the timeline
-        const nav = gsap.timeline({ clearProps: "all" });
-
-        // Add animation for hiding the list items with stagger
-        nav.to("#header .nav-container li", {
-            xPercent: 0, // Adjust this value to the desired end position
-            opacity: 1,
-            stagger: {
-                amount: 0.05,
-                ease: "back.out",
-            },
-            duration: 0.5,
-        });
-
-        // Add animation for hiding the container
-        nav.to("#header .nav-container", {
-            y: "-200vh",
-            opacity: 1,
-            ease: "power4.out",
-            duration: 0.5,
-        });
-    }
-});
-
-            // Toggle animation and add/remove 'active' class on button click
-           /*  $(".nav-toggle-btn").on("click", function () {
-                  let navMenu = new SplitText("#header .nav-container li", {type: "chars,words",});
-                 let menuChars = navMenu.chars; 
                 if (!$("#header .navbar").hasClass("active")) {
                     $("#header .navbar").addClass("active");
+
                     gsap.to("#header .nav-container", {
                         y: "0vh",
                         opacity: 1,
@@ -337,180 +305,206 @@
                         ease: "power4.out",
                         duration: 1,
                     });
-                    gsap.from("#header .nav-container li", {
+
+                    // Create a new timeline for the list items animation
+                    const listItemsAnimation = gsap.timeline();
+                    listItemsAnimation.from("#header .nav-container li", {
                         xPercent: 150,
                         opacity: 0,
                         stagger: 0.05,
-                        delay: .5,
+                        delay: 0.5,
                         ease: "back.out",
                         duration: 0.5,
                     });
+
                 } else {
                     $("#header .navbar").removeClass("active");
 
-                    const nav = gsap.timeline();
+                    // Clear the previous animations from the timeline
+                    const nav = gsap.timeline({ clearProps: "all" });
+
+                    // Add animation for hiding the list items with stagger
                     nav.to("#header .nav-container li", {
-                        xPercent: 150,
-                        opacity: 0,
-                        stagger: 0.05,
-                        ease: "back.out",
+                        xPercent: 0, // Adjust this value to the desired end position
+                        opacity: 1,
+                        stagger: {
+                            amount: 0.05,
+                            ease: "back.out",
+                        },
                         duration: 0.5,
                     });
+
+                    // Add animation for hiding the container
                     nav.to("#header .nav-container", {
                         y: "-200vh",
                         opacity: 1,
-                        stagger: 0.05,
                         ease: "power4.out",
-                        duration: .5,
+                        duration: 0.5,
                     });
-
-
                 }
-            }); */
+            });
+
+            // Toggle animation and add/remove 'active' class on button click
+            /*  $(".nav-toggle-btn").on("click", function () {
+                   let navMenu = new SplitText("#header .nav-container li", {type: "chars,words",});
+                  let menuChars = navMenu.chars; 
+                 if (!$("#header .navbar").hasClass("active")) {
+                     $("#header .navbar").addClass("active");
+                     gsap.to("#header .nav-container", {
+                         y: "0vh",
+                         opacity: 1,
+                         stagger: 0.05,
+                         ease: "power4.out",
+                         duration: 1,
+                     });
+                     gsap.from("#header .nav-container li", {
+                         xPercent: 150,
+                         opacity: 0,
+                         stagger: 0.05,
+                         delay: .5,
+                         ease: "back.out",
+                         duration: 0.5,
+                     });
+                 } else {
+                     $("#header .navbar").removeClass("active");
+ 
+                     const nav = gsap.timeline();
+                     nav.to("#header .nav-container li", {
+                         xPercent: 150,
+                         opacity: 0,
+                         stagger: 0.05,
+                         ease: "back.out",
+                         duration: 0.5,
+                     });
+                     nav.to("#header .nav-container", {
+                         y: "-200vh",
+                         opacity: 1,
+                         stagger: 0.05,
+                         ease: "power4.out",
+                         duration: .5,
+                     });
+ 
+ 
+                 }
+             }); */
         });
     </script>
+
     <script>
-        // const nav = gsap.timeline();
-
-        // nav.from(".navbar .nav-container", {
-        //     y: "-200vh",
-        //     opacity: 0,
-        //     stagger: 0.05,
-        //     ease: "power4.out",
-        //     duration: 1,
-        // });
-        // let navMenu = new SplitText(".navbar .nav-container li", { type: "chars,words" });
-        // let menuChars = navMenu.chars;
-        // nav.from(menuChars, {
-        //     xPercent: 150,
-        //     opacity: 0,
-        //     stagger: 0.05,
-        //     ease: "back.out",
-        //     duration: .5,
-        // });
-
-        gsap.from(".form-control", 1, {
+         const bannerTl = gsap.timeline();
+        let bannerSplitText = new SplitType(".banner .h1", { type: "chars,words" });
+        let bannerChars = bannerSplitText.chars;
+        bannerTl.from(bannerChars, {
+            yPercent: 130,
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out",
+            duration: .5,
+        });
+        //   Mouse 
+        bannerTl.from(".mouse-icon", {
+            scale: 2,
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out",
+            duration: 1,
+        });
+        gsap.to(".banner .h1-light", 2, {
+            x: "-150vh",
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: ".h1-light",
+                start: "top 20%",
+                scrub: true,
+            }
+        });
+        gsap.to(".banner .h1-black", 2, {
+            x: "150vh",
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: ".h1-light",
+                start: "top 20%",
+                scrub: true,
+            }
+        });
+    </script>
+    <!-- specialize section -->
+    <script>
+        gsap.from(".specialize .h3", 1, {
             x: 100,
             opacity: 0,
             ease: "expo.out",
             delay: 0.5,
             stagger: 0.3,
             scrollTrigger: {
-                trigger: ".write-to-us",
+                trigger: ".specialize",
                 start: "top 80%", // Adjust as needed
                 end: "bottom 60%", // Adjust as needed
                 // scrub: true,
             },
         });
-
-        // tl.from(".nav-container", {
-        //     y: "-100%",
-        //     ease: "power4.out",
-        //     delay: 1,
-        //     stagger: {
-        //         amount: 0.3
-        //     }
-        // })
-
-        // gsap.set('.op-img',{position:'absolute'})
-
-        // gsap.from(".specialize-left", {
-        //     opacity: 0,
-        //     y: 50,
-        //     duration:1,
-        //     scrollTrigger: {
-        //         trigger: ".specialize",
-        //         start: "top 80%", // Adjust as needed
-        //         end: "bottom 60%", // Adjust as needed
-        //         // scrub: true,
-        //     },
-        // });
-
-        // gsap.from(".specialize-right", {
-        //     opacity: 0,
-        //     y: 50,
-        //     duration:1,
-        //     scrollTrigger: {
-        //         trigger: ".specialize",
-        //         start: "top 80%", // Adjust as needed
-        //         end: "bottom 60%", // Adjust as needed
-        //         // scrub: true,
-        //     },
-        // });
+        gsap.from(".specialize .th-p", 1, {
+            scale: .5,
+            opacity: 0,
+            ease: "expo.out",
+            delay: 0.5,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: ".specialize",
+                start: "top 80%", // Adjust as needed
+                end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
+        gsap.from(".sr-t", 1, {
+            x: 100,
+            opacity: 0,
+            ease: "expo.out",
+            delay: 0.5,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: ".specialize",
+                start: "top 80%", // Adjust as needed
+                end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
     </script>
 
     <script>
-        /*  let bannerSplitText = new SplitText(".banner .h1", { type: "chars,words" });
-          let bannerChars = bannerSplitText.chars;
-          gsap.from(bannerChars, {
-              yPercent: 130,
-              opacity: 0,
-              stagger: 0.05,
-              ease: "back.out",
-              duration: .5,
-          }); 
-          let mySplitText = new SplitText(".our-work .h1", { type: "chars,words" });
-          let chars = mySplitText.chars;
-          gsap.from(chars, {
-              yPercent: 130,
-              opacity: 0,
-              stagger: 0.05,
-              ease: "back.out",
-              duration: .5,
-              scrollTrigger: {
-                  trigger: ".our-work",
-                  start: "top 80%",
-                  end: "top 20%",
-                  // scrub:true,
-                  // markers: true
-              }
-          });
-          let writeSplitText = new SplitText(".write-to-us .h1", { type: "chars,words" });
-          let writeChars = writeSplitText.chars;
-          gsap.from(writeChars, {
-              yPercent: 130,
-              opacity: 0,
-              stagger: 0.05,
-              ease: "back.out",
-              duration: .5,
-              scrollTrigger: {
-                  trigger: ".write-to-us",
-                  start: "top 80%",
-                  end: "top 20%",
-                  // scrub:true,
-                  // markers: true
-              }
-          }); */
-
-        /*    gsap.registerPlugin(SplitText, ScrollTrigger);
-          let mySplitText = new SplitText(".split", { type: "chars,words" });
-          let chars = mySplitText.chars;
-          gsap.from(chars, {
-              yPercent: 130,
-              opacity: 0,
-              stagger: 0.05,
-              ease: "back.out",
-              duration: .5,
-              scrollTrigger: {
-                  trigger: ".split",
-                  start: "top 80%",
-                  end: "top 20%",
-                  // scrub:true,
-                  // markers: true
-              }
-          });
-          const tl = gsap.timeline();
-  
-          tl.from(".line span", 1.8, {
-              y: 100,
-              ease: "power4.out",
-              delay: 1,
-              skewY: 7,
-              stagger: {
-                  amount: 0.3
-              }
-          })
-   */
+       
+        let mySplitText = new SplitType(".our-work .h1", { type: "chars,words" });
+        let chars = mySplitText.chars;
+        gsap.from(chars, {
+            yPercent: 130,
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out",
+            duration: .5,
+            scrollTrigger: {
+                trigger: ".our-work",
+                start: "top 80%",
+                end: "top 20%",
+                // scrub:true,
+                // markers: true
+            }
+        });
+        let writeSplitText = new SplitType(".write-to-us .h1", { type: "chars,words" });
+        let writeChars = writeSplitText.chars;
+        gsap.from(writeChars, {
+            yPercent: 130,
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out",
+            duration: .5,
+            scrollTrigger: {
+                trigger: ".write-to-us",
+                start: "top 80%",
+                end: "top 20%",
+                // scrub:true,
+                // markers: true
+            }
+        });
         // let mySplitPera = new SplitText(".th-p", { type: "chars,words" });
         // let charsPera = mySplitPera.words;
         // gsap.from(charsPera, {
@@ -538,6 +532,33 @@
                 // scrub: true,
             },
         });
+        gsap.from(".write-to-us .th-p", {
+            scale: 2,
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".write-to-us",
+                start: "top 30%", // Adjust as needed
+                end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
+        gsap.from(".f-input .col-12", 1, {
+            x: 100,
+            opacity: 0,
+            ease: "expo.out",
+            delay: 0.5,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: ".write-to-us",
+                start: "top 30%", // Adjust as needed
+                end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
+       
     </script>
 </body>
 
