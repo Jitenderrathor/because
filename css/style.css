@@ -49,12 +49,15 @@ body {
     color: #222;
     font-size: 1.6rem;
 } */
-body{
+body {
     overflow-x: hidden;
 }
-.container-xxl{
+
+.container-xxl {
     max-width: 1440px !important;
+    padding: 20px;
 }
+
 a {
     text-decoration: none;
     color: #222;
@@ -65,7 +68,7 @@ a {
     font-size: 180px;
     font-weight: 400;
     line-height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .h1 .h1-light {
@@ -78,44 +81,51 @@ a {
     /* font-weight: 600; */
     margin-left: 130px;
 }
-.th-p{
+
+.th-p {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 24px;
     line-height: 130%;
 }
-.h3{
+
+.h3 {
     font-family: var(--font-family);
     font-size: 32px;
     font-weight: 700;
     line-height: 120%;
 }
 
-.th-btn{
+.th-btn {
     font-family: var(--font-family);
     /* display: block; */
     font-size: 18px;
     font-weight: 600;
-    padding: 5px 10px ;
+    padding: 5px 10px;
     border-radius: 20px;
     border: 1px solid var(--th-color-4);
 }
 
 
-.th-btn .far{
+.th-btn .far {
     font-size: 16px;
 }
-.row{
+/* 
+.row {
     padding: 0px !important;
-}
+} */
+
 /* ------------- base End ------------- */
 
 
 /* Header Scetion Start ------------------------------ */
 #header {
+    background-color: white;
+
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     width: 100%;
 }
 
@@ -140,33 +150,50 @@ a {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: solid 2px var(--th-color-4);
+    /* border: solid 2px var(--th-color-4); */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+.ntb {
+    height: 4px;
+    border-radius: 30px;
+    background-color: var(--th-color-4);
     position: relative;
     transition: all .5s;
 }
 
-.nav-toggle::after {
-    content: "";
-    position: absolute;
-    top: 40%;
-    right: 10%;
-    /* transform: translateX(50%); */
-    width: 60%;
-    height: 2px;
-    border-radius: 10px;
-    background-color: var(--th-color-4);
+.ntb-t {
+    width: 30px;
+    margin-left: auto;
 }
 
-.nav-toggle::before {
-    content: " ";
-    position: absolute;
-    top: 60%;
-    right: 10%;
-    /* transform: translateX(50%); */
-    width: 70%;
-    height: 2px;
-    border-radius: 10px;
-    background-color: var(--th-color-4);
+.ntb-m {
+    width: 60px;
+    margin: 17px 0;
+}
+
+.ntb-b {
+    width: 30px;
+}
+
+
+.navbar.active .ntb-m {
+    opacity: 0;
+  }
+.navbar.active .ntb-t {
+    width: 60px;
+    transform-origin: top left;
+    transform: rotate(45deg);
+}
+.navbar.active .ntb-b {
+    width: 60px;
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
 }
 
 /* .nav-toggle:hover{
@@ -176,6 +203,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 80;
     width: 100%;
     height: 100vh;
     background-color: var(--th-color-2);
@@ -208,6 +236,7 @@ a {
     margin-top: 40px;
     padding: 100px 0px;
 }
+
 .banner .h1 {
     color: var(--th-color-1);
 }
@@ -217,40 +246,46 @@ a {
 
 
 /* Specialize Scetion Start ------------------------------ */
-.specialize{
+.specialize {
     padding: 80px 0 100px 0;
     background-image: linear-gradient(rgba(253, 218, 22, 0.0), rgba(253, 218, 22, 0.6), rgba(253, 218, 22, 0.0));
 }
-.specialize .far{
+
+.specialize .far {
     font-size: 32px;
 }
+
 .specialize .th-p.ltb {
     display: block;
-    margin:  0 0 120px 0  !important;
+    margin: 0 0 120px 0 !important;
     /* line-height: 200px; */
 }
+
 /* ------------- Specialize Scetion  End ------------- */
 
 
 /* Specialize Scetion Start ------------------------------ */
-.ow-text{
+.ow-text {
     padding: 40px;
 }
-.ow-text .h3:first-child{
+
+.ow-text .h3:first-child {
     font-weight: 500;
-color: var(--th-color-3);
+    color: var(--th-color-3);
 }
-.ow-btn{
+
+.ow-btn {
     margin-top: 150px;
 }
+
 /* ------------- Specialize Scetion  End ------------- */
 
 /* Our Project Scetion Start ------------------------------ */
-.our-project{
+.our-project {
     padding: 100px 0;
 }
 
-.our-project .h3{
+.our-project .h3 {
     font-weight: 400;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--th-color-4);
@@ -258,32 +293,53 @@ color: var(--th-color-3);
     margin: auto;
     margin-bottom: 40px;
 }
+
+.op-row {
+    height: 500px;
+}
+
+/* .op-img{
+    --spating:400px;
+    position: absolute;
+    right: var(--spating);
+}
+.op-img:nth-child(2){
+    right: calc(var(--spating)*2);
+}
+.op-img:nth-child(3){
+    right: calc(var(--spating)*2);
+} */
 /* ------------- Our Project Scetion End ------------- */
 
 
 /* Write to us Scetion Start ------------------------------ */
-.write-to-us{
-padding: 100px 0;
+.write-to-us {
+    padding: 100px 0;
 }
-.write-to-us input{
+
+.write-to-us input {
     width: 100%;
     border: none;
-    border-bottom:2px solid var(--th-color-4);
+    border-bottom: 2px solid var(--th-color-4);
     padding: 10px 0px;
 }
-.write-to-us .th-btn{
+
+.write-to-us .th-btn {
     background-color: transparent;
 }
-.write-to-us .th-btn .far{
+
+.write-to-us .th-btn .far {
     transform: rotate(-45deg);
 }
+
 /* ------------- Write to us Scetion End ------------- */
 
 /* Footer Scetion Start ------------------------------ */
-footer .foot-menu{
+footer .foot-menu {
     overflow: hidden;
 }
-footer .f-text{
+
+footer .f-text {
     font-size: var(--font-family);
     font-size: 80px;
     /* font-weight: 400; */
@@ -294,15 +350,18 @@ footer .f-text{
     border-bottom: 3px solid var(--th-color-1);
     /* padding: 4px 0; */
 }
-footer .f-text .fas{
+
+footer .f-text .fas {
     font-size: 12px;
     margin: 0 30px;
 }
-.foot-up{
+
+.foot-up {
     text-align: center;
     padding: 50px 0 20px;
 }
-.foot-up .fal{
+
+.foot-up .fal {
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -310,7 +369,7 @@ footer .f-text .fas{
     text-align: center;
     border: 2px solid var(--th-color-2);
     border-radius: 50%;
-    margin:0px auto 40px;
+    margin: 0px auto 40px;
 }
-/* ------------- Footer Scetion End ------------- */
 
+/* ------------- Footer Scetion End ------------- */

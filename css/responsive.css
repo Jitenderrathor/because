@@ -5,14 +5,101 @@
 
 /* Large devices (992px and down) */
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+
+
+    .h1 {
+        font-size: 130px;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .h1 .h1-light {
+        margin-right: 80px;
+    }
+
+    .h1 .h1-black {
+        margin-left: 80px;
+    }
+
+    .ow-text {
+        padding: 20px;
+    }
+
+    .ow-btn {
+        margin-top: 66px;
+    }
+}
 
 
 /* Medium devices (768px and down) */
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .h1 {
+        font-size: 100px;
+    }
+
+    .h3 {
+        font-size: 28px;
+    }
+    .th-p {
+        font-size: 20px;
+    }
+
+    /* Navigation  */
+    .nav-logo {
+        max-width: 150px;
+    }
+
+    .nav-toggle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ntb {
+        height: 3px;
+    }
+
+    .ntb-t {
+        width: 20px;
+        margin-left: auto;
+    }
+
+    .ntb-m {
+        width: 40px;
+        margin: 11px 0;
+    }
+
+    .ntb-b {
+        width: 20px;
+    }
+
+    .navbar.active .ntb-t {
+        width: 40px;
+    }
+
+    .navbar.active .ntb-b {
+        width: 40px;
+    }
+
+    .ow-text .h3:first-child {
+        font-weight: 500;
+        color: var(--th-color-3);
+    }
+
+    .banner {
+        padding-bottom: 40px;
+    }
+
+}
 
 
 /* Small devices (576px and down) */
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+    .h1 {
+        font-size: 60px;
+    }
+}
