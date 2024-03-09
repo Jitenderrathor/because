@@ -329,7 +329,6 @@ a {
     font-size: 40px;
     color: var(--th-color-1);
   animation: moveMouse 2s infinite;
-  animation: moveArrow 2s infinite;
 }
 
 .specialize .far {
@@ -456,7 +455,10 @@ footer .f-text .fas {
     text-align: center;
     border: 2px solid var(--th-color-2);
     border-radius: 50%;
-    margin: 0px auto 40px;
+    margin: 60px auto 50px;
+    cursor: pointer;
+  animation: moveMouse 2s infinite;
+
 }
 
 /* ------------- Footer Scetion End ------------- */

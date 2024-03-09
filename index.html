@@ -142,8 +142,8 @@
                 </div>
                 <div class="col-md-6 mt-4">
                     <div class="ow-text">
-                        <div class="h3">Lodestone</div>
-                        <div class="h3">
+                        <div class="h3 h3-1">Lodestone</div>
+                        <div class="h3 h3-2">
                             A website which excels in digital solutions, trusted by top tech
                             leaders.
                         </div>
@@ -237,32 +237,64 @@
     <!-- Write to us Section End -->
 
     <!-- Footer Section Start -->
-    <footer id="footer">
+    <footer class="footer" id="footer">
         <div class="foot-menu">
-            <div class="f-text d-flex align-items-center">
-                <div class="">HOME</div>
-                <i class="fas fa-circle"></i>
-                <div class="">ABOUT</div>
-                <i class="fas fa-circle"></i>
-                <div class="">PROJECT</div>
-                <i class="fas fa-circle"></i>
-                <div class="">SERVICE</div>
-                <i class="fas fa-circle"></i>
-                <div class="">CONTACT</div>
-                <i class="fas fa-circle"></i>
-                <div class="">HOME</div>
-                <i class="fas fa-circle"></i>
-                <div class="">ABOUT</div>
-                <i class="fas fa-circle"></i>
-                <div class="">PROJECT</div>
-                <i class="fas fa-circle"></i>
-                <div class="">SERVICE</div>
-                <i class="fas fa-circle"></i>
-                <div class="">CONTACT</div>
-            </div>
+            <marquee class="f-text d-flex align-items-center" behavior="" direction="">
+                <a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+                <i class="fas fa-circle"></i><a href="#">HOME</a>
+                <i class="fas fa-circle"></i><a href="#">ABOUT</a>
+                <i class="fas fa-circle"></i><a href="#">PROJECT</a>
+                <i class="fas fa-circle"></i><a href="#">SERVICE</a>
+                <i class="fas fa-circle"></i><a href="#">CONTACT</a>
+            </marquee>
+            
         </div>
         <div class="foot-up">
-            <i class="fal fa-arrow-up"></i>
+           <a href="#"> <i class="fal fa-arrow-up"></i></a>
 
             <div class="th-p">All rights reserved by Because</div>
         </div>
@@ -284,9 +316,9 @@
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
     <script>
-        // $(".nav-toggle-btn").click(function(){
-        //     $(".navbar").toggleClass("active");
-        // })
+   $('.foot-up .fal').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+      });
         gsap.registerPlugin(ScrollTrigger);
     </script>
     <script>
@@ -409,6 +441,7 @@
             ease: "back.out",
             duration: 1,
         });
+       
         gsap.to(".banner .h1-light", 2, {
             x: "-150vh",
             stagger: 0.05,
@@ -521,12 +554,76 @@
         //         // markers: true
         //     }
         // });
-        gsap.from(".op-img img", {
+        
+        gsap.from(".ow-img", {
             opacity: 0,
-            y: 150,
+            x: "-150%",
+            delay:.5,
+
             stagger: 0.2, // Adjust as needed
             scrollTrigger: {
-                trigger: ".op-row",
+                trigger: ".our-work",
+                start: "top 20%", // Adjust as needed
+                // end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
+        gsap.from(".ow-text .h3-1", {
+            y: 150,
+            opacity: 0,
+            stagger: 0.2, // Adjust as needed
+            delay:.5,
+            scrollTrigger: {
+                trigger: ".our-work",
+                start: "top 20%", // Adjust as needed
+                // end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
+        gsap.from(".ow-text .h3-2", {
+            y: 150,
+            opacity: 0,
+            stagger: 0.2, // Adjust as needed
+            delay:1,
+            scrollTrigger: {
+                trigger: ".our-work",
+                start: "top 20%", // Adjust as needed
+                // end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
+        gsap.from(".ow-btn", {
+            x: 150,
+            opacity: 0,
+            stagger: 0.2, // Adjust as needed
+            delay:1,
+            scrollTrigger: {
+                trigger: ".our-work",
+                start: "top 20%", // Adjust as needed
+                // end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
+        
+        gsap.from(".our-project .h3", {
+            scale: 2,
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".our-project",
+                start: "top 20%", // Adjust as needed
+                // end: "bottom 60%", // Adjust as needed
+                // scrub: true,
+            },
+        });
+        gsap.from(".our-project .row .col-6", {
+            opacity: 0,
+            x: "150%",
+            stagger: 0.2, // Adjust as needed
+            scrollTrigger: {
+                trigger: ".our-project",
                 start: "top 80%", // Adjust as needed
                 // end: "bottom 60%", // Adjust as needed
                 // scrub: true,
@@ -558,7 +655,8 @@
                 // scrub: true,
             },
         });
-       
+        
+        
     </script>
 </body>
 
