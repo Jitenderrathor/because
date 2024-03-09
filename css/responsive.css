@@ -84,6 +84,19 @@
         width: 40px;
     }
 
+    .nav-container {
+        padding-top:120px ;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+    
+    .nav-container ul li {
+        margin: 10px 0px;
+    }
+    
+    .nav-container ul li a {
+        font-size: 40px;
+    }
     .ow-text .h3:first-child {
         font-weight: 500;
         color: var(--th-color-3);

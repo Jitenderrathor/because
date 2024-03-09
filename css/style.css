@@ -98,17 +98,53 @@ a {
 
 .th-btn {
     font-family: var(--font-family);
-    /* display: block; */
+    display: inline-block;
+    position: relative;
+    z-index: 2;
     font-size: 18px;
     font-weight: 600;
     padding: 5px 10px;
     border-radius: 20px;
     border: 1px solid var(--th-color-4);
+    overflow: hidden !important;
+
+    transition: all .5s;
+}
+.th-btn:hover{
+    color: white;
 }
 
+.th-btn::before{
+    content: " ";
+    width: 100%;
+    height: 70px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: var(--th-color-2);
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 0;
+    transition: all .5s;
+}
+.tb-t{
+    position: relative;
+    z-index: 2;
+}
+
+.th-btn:hover:before{
+    top: -30px;
+    transition: all .5s;
+}
 
 .th-btn .far {
     font-size: 16px;
+    position: relative;
+    z-index: 2;
+    transition: all .5s;
+}
+.th-btn:hover .far{
+    color: var(--th-color-1);
 }
 /* 
 .row {
@@ -125,7 +161,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
 }
 
@@ -140,6 +176,8 @@ a {
 .nav-logo {
     max-width: 200px;
     width: 100%;
+    position: relative;
+    z-index: 100;
 }
 
 .nav-logo img {
@@ -152,6 +190,7 @@ a {
     border-radius: 50%;
     /* border: solid 2px var(--th-color-4); */
     position: relative;
+    z-index: 100;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -187,11 +226,13 @@ a {
   }
 .navbar.active .ntb-t {
     width: 60px;
+    background-color: white;
     transform-origin: top left;
     transform: rotate(45deg);
 }
 .navbar.active .ntb-b {
     width: 60px;
+    background-color: white;
     transform-origin: bottom left;
     transform: rotate(-45deg);
 }
@@ -203,13 +244,17 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 80;
+    z-index: 80 !important;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
+    padding-top: 100px;
+    /* transform: translateY(-200vh); */
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
     background-color: var(--th-color-2);
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .nav-container ul {
@@ -223,7 +268,7 @@ a {
 
 .nav-container ul li a {
     font-size: var(--font-family);
-    font-size: 50px;
+    font-size: 80px;
     font-weight: 600;
     color: white;
     text-transform: uppercase;
