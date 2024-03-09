@@ -1,6 +1,38 @@
 /* Extra large devices (1200px and down) */
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+    .nav-toggle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ntb {
+        height: 3px;
+    }
+
+    .ntb-t {
+        width: 20px;
+        margin-left: auto;
+    }
+
+    .ntb-m {
+        width: 40px;
+        margin: 11px 0;
+    }
+
+    .ntb-b {
+        width: 20px;
+    }
+
+    .navbar.active .ntb-t {
+        width: 40px;
+    }
+
+    .navbar.active .ntb-b {
+        width: 40px;
+    }
+
+}
 
 
 /* Large devices (992px and down) */
@@ -53,37 +85,7 @@
         max-width: 150px;
     }
 
-    .nav-toggle {
-        width: 50px;
-        height: 50px;
-    }
-
-    .ntb {
-        height: 3px;
-    }
-
-    .ntb-t {
-        width: 20px;
-        margin-left: auto;
-    }
-
-    .ntb-m {
-        width: 40px;
-        margin: 11px 0;
-    }
-
-    .ntb-b {
-        width: 20px;
-    }
-
-    .navbar.active .ntb-t {
-        width: 40px;
-    }
-
-    .navbar.active .ntb-b {
-        width: 40px;
-    }
-
+    
     .nav-container {
         padding-top:120px ;
         border-bottom-left-radius: 50%;
@@ -137,5 +139,9 @@ footer .f-text {
     
     .h3 {
         font-size: 22px;
+    }
+     /* Navigation  */
+     .nav-logo {
+        max-width: 140px;
     }
 }
