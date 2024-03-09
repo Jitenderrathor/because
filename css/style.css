@@ -52,6 +52,9 @@ body {
 body {
     overflow-x: hidden;
 }
+section{
+    overflow: hidden;
+}
 
 .container-xxl {
     max-width: 1440px !important;
