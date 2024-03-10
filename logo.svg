@@ -1,0 +1,10 @@
+
+<svg viewBox="0 0 100 100">
+<path id="curve" d="M0 40 q12.5 -15,25 0, t25 0,t25 0,t25 0" fill="none" stroke="white" stroke-opacity="0.2" stroke-dasharray="4" stroke-width="10"></path>
+<text fill="yellow" font-size="4" text-anchor="end">
+<textPath href="#curve">
+This text will follow a curved path! This text will follow a curved path!
+</textPath>
+<animate attributeName="x" begin="0" dur="15s" to="300" repeatCount="indefinite" /> 
+  </text>
+</svg>

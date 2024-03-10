@@ -152,7 +152,7 @@ gsap.from(".specialize .h3", 1, {
     stagger: 0.3,
     scrollTrigger: {
         trigger: ".specialize",
-        start: "top 80%", // Adjust as needed
+        start: "top 50%", // Adjust as needed
         end: "bottom 60%", // Adjust as needed
         // scrub: true,
     },
