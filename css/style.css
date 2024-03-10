@@ -224,8 +224,8 @@ a {
 }
 
 .nav-toggle {
-  width: 60px;
-  height: 60px;
+  /* width: 60px; */
+  /* height: 60px; */
   border-radius: 50%;
   /* border: solid 2px var(--th-color-4); */
   position: relative;

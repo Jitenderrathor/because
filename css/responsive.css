@@ -1,10 +1,10 @@
 /* Extra large devices (1200px and down) */
 
 @media screen and (max-width: 1200px) {
-    .nav-toggle {
+    /* .nav-toggle {
         width: 50px;
         height: 50px;
-    }
+    } */
 
     .ntb {
         height: 3px;

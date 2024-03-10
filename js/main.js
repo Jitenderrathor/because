@@ -105,7 +105,7 @@ $(document).ready(function () {
 
 // Banner Text In
 const bannerTl = gsap.timeline();
-let bannerSplitText = new SplitType(".banner .h1", { type: "chars, words" });
+let bannerSplitText = new SplitType(".banner .h1", { type: "chars,words" });
 let bannerChars = bannerSplitText.chars;
 bannerTl.from(bannerChars, {
     yPercent: 130,
