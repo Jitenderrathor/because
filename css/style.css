@@ -36,6 +36,13 @@ Spacing System
   --th-color-2: #020202;
   --th-color-3: #7e7e7e;
   --th-color-4: #545454;
+  --th-color-5: #ffffff;
+  --th-color-6: #fdda16;
+  --th-fs-h1: 180px;
+  --th-fs-h2: 100px;
+  --th-fs-h3: 40px;
+  --th-fs-h4: 32px;
+  --th-fs-h5: 22px;
   --font-family: "Red Hat Display", sans-serif;
 }
 
@@ -55,7 +62,7 @@ section {
 }
 
 .container-xxl {
-  max-width: 1440px !important;
+  max-width: 1600px !important;
   padding: 20px;
 }
 
@@ -66,7 +73,7 @@ a {
 
 .h1 {
   font-family: var(--font-family);
-  font-size: 180px;
+  font-size: var(--th-fs-h1);
   font-weight: 400;
   line-height: 100%;
   /* overflow: hidden; */
@@ -86,14 +93,26 @@ a {
 .th-p {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 24px;
+  font-size: var(--th-fs-h4);
   line-height: 130%;
 }
 
 .h3 {
   font-family: var(--font-family);
-  font-size: 32px;
+  font-size: var(--th-fs-h3);
   font-weight: 700;
+  line-height: 120%;
+}
+.h4 {
+  font-family: var(--font-family);
+  font-size: var(--th-fs-h4);
+  font-weight: 600;
+  line-height: 120%;
+}
+.h5 {
+  font-family: var(--font-family);
+  font-size: var(--th-fs-h5);
+  font-weight: 600;
   line-height: 120%;
 }
 
@@ -111,9 +130,9 @@ a {
 
   transition: all 0.5s;
 }
-.th-btn:hover {
+/* .th-btn:hover {
   color: white;
-}
+} */
 
 .th-btn::before {
   content: " ";
@@ -121,7 +140,7 @@ a {
   height: 70px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  background-color: var(--th-color-2);
+  background-color: var(--th-color-6);
   position: absolute;
   z-index: 1;
   top: 40px;
@@ -144,13 +163,6 @@ a {
   z-index: 2;
   transition: all 0.5s;
 }
-.th-btn:hover .far {
-  color: var(--th-color-1);
-}
-/* 
-.row {
-    padding: 0px !important;
-} */
 
 /* ------------- base End ------------- */
 
@@ -190,7 +202,7 @@ a {
   transform: translateX(24px);
 }
 /* Header Scetion Start ------------------------------ */
-#header {
+/* #header {
   background-color: white;
 
   position: fixed;
@@ -206,7 +218,6 @@ a {
 
 .navbar {
   width: calc(100%);
-  /* padding: 20px 0px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -224,10 +235,7 @@ a {
 }
 
 .nav-toggle {
-  /* width: 60px; */
-  /* height: 60px; */
   border-radius: 50%;
-  /* border: solid 2px var(--th-color-4); */
   position: relative;
   z-index: 100;
   cursor: pointer;
@@ -275,9 +283,6 @@ a {
   transform: rotate(-45deg);
 }
 
-/* .nav-toggle:hover{
-
-} */
 .nav-container {
   position: fixed;
   top: 0;
@@ -292,7 +297,6 @@ a {
   background-color: var(--th-color-2);
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .nav-container ul {
@@ -314,6 +318,46 @@ a {
 }
 .nav-container ul li a:hover {
   color: var(--th-color-1) !important;
+} */
+
+.header-bottom {
+  max-width: 700px;
+  width: 100%;
+  background-color: var(--th-color-5);
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%,0);
+  padding: 10px 0px;
+  border: 1px solid rgba(84, 84, 84, 0.2);
+  transition: all .5s;
+}
+.header-bottom.active{
+  transform: translate(-50%, 150%);
+}
+.hb-container .hb-box {
+  padding: 10px 15px;
+}
+/* .hb-container .hb-mid {
+ border-left: 1px solid var(--th-color-3);
+  border-right: 1px solid var(--th-color-3); 
+} */
+.hb-container .nav-item a {
+  font-family: var(--font-family);
+  font-size: var(--th-fs-h5);
+  font-weight: 600;
+  line-height: 100%;
+  text-align: left;
+  margin: 0px 8px;
+  transition: all 0.5s;
+}
+hb-container .nav-item.active a{
+  color: var(--th-color-1);
+}
+.hb-container .nav-item a:hover {
+  color: var(--th-color-1);
 }
 /* ------------- Header Scetion  End ------------- */
 
@@ -354,7 +398,7 @@ a {
   }
 }
 .specialize {
-  padding: 80px 0 100px 0;
+  padding: 150px 0;
   background-image: linear-gradient(
     rgba(253, 218, 22, 0),
     rgba(253, 218, 22, 0.6),
@@ -371,7 +415,7 @@ a {
 }
 
 .specialize .far {
-  font-size: 32px;
+  font-size: var(--th-fs-h4);
 }
 
 .specialize .th-p.ltb {
@@ -399,24 +443,28 @@ a {
 /* ------------- Specialize Scetion  End ------------- */
 
 /* Specialize Scetion Start ------------------------------ */
+.our-work {
+  padding-bottom: 80px;
+}
 .ow-text {
   padding: 40px;
 }
 
-.ow-text .h3:first-child {
+.ow-text .h4,
+.ow-text .h5 {
   font-weight: 500;
   color: var(--th-color-3);
+  line-height: 120%;
 }
-
 .ow-btn {
-  margin-top: 150px;
+  margin-top: 110px;
 }
 
 /* ------------- Specialize Scetion  End ------------- */
 
 /* Our Project Scetion Start ------------------------------ */
 .our-project {
-  padding: 100px 0;
+  padding: 20px 0 100px 0;
 }
 
 .our-project .h3 {
@@ -436,6 +484,46 @@ a {
   display: flex;
   flex-wrap: nowrap;
 }
+.op-img {
+  position: relative;
+  overflow: hidden;
+}
+.op-img img{
+  transition: all 1s;
+}
+.op-img:hover img{
+ transform: scale(1.5);
+}
+.opi-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(49, 86, 167, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.opi-overlay a .fal {
+  font-size: var(--th-fs-h5);
+  background-color: var(--th-color-5);
+  color: var(--th-color-1);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.op-img:hover .opi-overlay {
+  opacity: 1;
+}
+/* .op-img .opi-overlay a .fal:hover {
+
+} */
 /* .op-img{
     --spating:400px;
     position: absolute;
@@ -460,8 +548,8 @@ a {
   border-bottom: 2px solid var(--th-color-4);
   padding: 10px 0px;
 }
-.write-to-us input::placeholder{
-   font-size: 16px;
+.write-to-us input::placeholder {
+  font-size: 16px;
 }
 
 .write-to-us .th-btn {
@@ -478,22 +566,41 @@ a {
 footer .foot-menu {
   overflow: hidden;
 }
-
-footer .f-text {
-  font-size: var(--font-family);
-  font-size: 90px;
-  /* font-weight: 400; */
-  color: var(--th-color-2);
-  line-height: 140%;
-  text-transform: uppercase;
+footer .f-text{
   border-top: 3px solid var(--th-color-1);
   border-bottom: 3px solid var(--th-color-1);
-  /* padding: 4px 0; */
+  transition: all .2s;
 }
+footer .f-text:hover{
+  background-color: var(--th-color-6);
+  border-top: 3px solid var(--th-color-6);
+  border-bottom: 3px solid var(--th-color-6);
+}
+footer .f-text .ft-l a{
+  font-family: var(--font-family);
+  font-size: var(--th-fs-h2);
+  color: var(--th-color-2);
+  line-height: 120%;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+footer .f-text:hover .ft-l a{
+color: var(--th-color-1);
+}
+footer .f-text .ft-l a:hover{
+  text-decoration: underline;
+  }
 
 footer .f-text .fas {
+  width:  var(--th-fs-h2);
+  height:  var(--th-fs-h2);
+  line-height: var(--th-fs-h2);
   font-size: 12px;
-  margin: 0 30px;
+  text-align: center;
+  transition: all .2s;
+}
+footer .f-text:hover .fas {
+ color: var(--th-color-1);
 }
 
 .foot-up {
@@ -512,6 +619,11 @@ footer .f-text .fas {
   margin: 60px auto 50px;
   cursor: pointer;
   animation: moveMouse 2s infinite;
+  transition: all .2s;
+}
+.foot-up .fal:hover{
+background-color: var(--th-color-1);
+color: var(--th-color-5);
 }
 
 /* ------------- Footer Scetion End ------------- */

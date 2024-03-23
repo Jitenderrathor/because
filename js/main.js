@@ -1,3 +1,5 @@
+// AOS Js (Reveal Animation)
+AOS.init();
 //  dark and light mode 
 // Listen for the change event on the checkbox
 $('#checkbox').change(function () {
@@ -105,7 +107,7 @@ $(document).ready(function () {
 
 // Banner Text In
 const bannerTl = gsap.timeline();
-let bannerSplitText = new SplitType(".banner .h1", { type: "chars,words" });
+let bannerSplitText = new SplitType(".banner .h1", { type: "chars, words" });
 let bannerChars = bannerSplitText.chars;
 bannerTl.from(bannerChars, {
     yPercent: 130,
@@ -142,47 +144,46 @@ gsap.to(".banner .h1-black", 2, {
         scrub: true,
     }
 });
-
 // specialize section
-gsap.from(".specialize .h3", 1, {
-    x: 100,
-    opacity: 0,
-    ease: "expo.out",
-    delay: 0.5,
-    stagger: 0.3,
-    scrollTrigger: {
-        trigger: ".specialize",
-        start: "top 80%", // Adjust as needed
-        end: "bottom 60%", // Adjust as needed
-        // scrub: true,
-    },
-});
-gsap.from(".specialize .th-p", 1, {
-    scale: .5,
-    opacity: 0,
-    ease: "expo.out",
-    delay: 0.5,
-    stagger: 0.3,
-    scrollTrigger: {
-        trigger: ".specialize",
-        start: "top 80%", // Adjust as needed
-        end: "bottom 60%", // Adjust as needed
-        // scrub: true,
-    },
-});
-gsap.from(".sr-t", 1, {
-    x: 100,
-    opacity: 0,
-    ease: "expo.out",
-    delay: 0.5,
-    stagger: 0.3,
-    scrollTrigger: {
-        trigger: ".specialize",
-        start: "top 80%", // Adjust as needed
-        end: "bottom 60%", // Adjust as needed
-        // scrub: true,
-    },
-});
+// gsap.from(".specialize .h3", 1, {
+//     x: 100,
+//     opacity: 0,
+//     ease: "expo.out",
+//     delay: 0.5,
+//     stagger: 0.3,
+//     scrollTrigger: {
+//         trigger: ".specialize",
+//         start: "top 80%", // Adjust as needed
+//         end: "bottom 60%", // Adjust as needed
+//         // scrub: true,
+//     },
+// });
+// gsap.from(".specialize .th-p", 1, {
+//     scale: .5,
+//     opacity: 0,
+//     ease: "expo.out",
+//     delay: 0.5,
+//     stagger: 0.3,
+//     scrollTrigger: {
+//         trigger: ".specialize",
+//         start: "top 80%", // Adjust as needed
+//         end: "bottom 60%", // Adjust as needed
+//         // scrub: true,
+//     },
+// });
+// gsap.from(".sr-t", 1, {
+//     x: 100,
+//     opacity: 0,
+//     ease: "expo.out",
+//     delay: 0.5,
+//     stagger: 0.3,
+//     scrollTrigger: {
+//         trigger: ".specialize",
+//         start: "top 80%", // Adjust as needed
+//         end: "bottom 60%", // Adjust as needed
+//         // scrub: true,
+//     },
+// });
 
 
 // Our work 
@@ -219,54 +220,54 @@ gsap.from(writeChars, {
     }
 });
 
-gsap.from(".ow-img", {
-    opacity: 0,
-    x: "-150%",
-    delay: .5,
-    stagger: 0.2, // Adjust as needed
-    scrollTrigger: {
-        trigger: ".our-work",
-        start: "top 50%", // Adjust as needed
-        // end: "bottom 60%", // Adjust as needed
-        // scrub: true,
-    },
-});
-gsap.from(".ow-text .h3-1", {
-    y: 150,
-    opacity: 0,
-    stagger: 0.2, // Adjust as needed
-    delay: .5,
-    scrollTrigger: {
-        trigger: ".our-work",
-        start: "top 20%", // Adjust as needed
-        // end: "bottom 60%", // Adjust as needed
-        // scrub: true,
-    },
-});
-gsap.from(".ow-text .h3-2", {
-    y: 150,
-    opacity: 0,
-    stagger: 0.2, // Adjust as needed
-    delay: 1,
-    scrollTrigger: {
-        trigger: ".our-work",
-        start: "top 20%", // Adjust as needed
-        // end: "bottom 60%", // Adjust as needed
-        // scrub: true,
-    },
-});
-gsap.from(".ow-btn", {
-    x: 150,
-    opacity: 0,
-    stagger: 0.2, // Adjust as needed
-    delay: 1,
-    scrollTrigger: {
-        trigger: ".our-work",
-        start: "top 20%", // Adjust as needed
-        // end: "bottom 60%", // Adjust as needed
-        // scrub: true,
-    },
-});
+// gsap.from(".ow-img", {
+//     opacity: 0,
+//     x: "-150%",
+//     delay: .5,
+//     stagger: 0.2, // Adjust as needed
+//     scrollTrigger: {
+//         trigger: ".our-work",
+//         start: "top 50%", // Adjust as needed
+//         // end: "bottom 60%", // Adjust as needed
+//         // scrub: true,
+//     },
+// });
+// gsap.from(".ow-text .h3-1", {
+//     y: 150,
+//     opacity: 0,
+//     stagger: 0.2, // Adjust as needed
+//     delay: .5,
+//     scrollTrigger: {
+//         trigger: ".our-work",
+//         start: "top 20%", // Adjust as needed
+//         // end: "bottom 60%", // Adjust as needed
+//         // scrub: true,
+//     },
+// });
+// gsap.from(".ow-text .h3-2", {
+//     y: 150,
+//     opacity: 0,
+//     stagger: 0.2, // Adjust as needed
+//     delay: 1,
+//     scrollTrigger: {
+//         trigger: ".our-work",
+//         start: "top 20%", // Adjust as needed
+//         // end: "bottom 60%", // Adjust as needed
+//         // scrub: true,
+//     },
+// });
+// gsap.from(".ow-btn", {
+//     x: 150,
+//     opacity: 0,
+//     stagger: 0.2, // Adjust as needed
+//     delay: 1,
+//     scrollTrigger: {
+//         trigger: ".our-work",
+//         start: "top 20%", // Adjust as needed
+//         // end: "bottom 60%", // Adjust as needed
+//         // scrub: true,
+//     },
+// });
 
 
 
