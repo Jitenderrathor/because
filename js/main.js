@@ -1,5 +1,22 @@
+// Loading Common Element Using External File
+$("#header").load("header.html");
+$("#footer").load("footer.html");
+$("#write-to-us").load("contact-form.html");
+
+
 // AOS Js (Reveal Animation)
 AOS.init();
+
+$(window).on('load', function(){
+     // Get the body's ID
+     var bodyId = $('body').attr('id');
+    
+     // Add active class to data-nav-item with matching value
+     $('[data-nav-item="' + bodyId + '"]').addClass('active');
+     
+     // Remove active class from .header-bottom
+     $('.header-bottom').removeClass('active');
+})
 //  dark and light mode 
 // Listen for the change event on the checkbox
 $('#checkbox').change(function () {
@@ -30,20 +47,49 @@ $(".th-mode").click(function(){
 $(document).ready(function () {
     var lastScrollTop = 0;
 
-    $(window).scroll(function () {
-        var scrollTop = $(this).scrollTop();
-
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            $('header').addClass('hidden');
-        } else {
-            // Scrolling to the top
-            $('header').removeClass('hidden');
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if(st>0){
+            $(".ht-left img").addClass("d-none");
+        } else{
+            $(".ht-left img").removeClass("d-none");
         }
+        if (st > lastScrollTop) {
+            // Downscroll code
+            $('.header-bottom').addClass('active');
+        } else {
+            // Upscroll code
+            $('.header-bottom').removeClass('active');
+        }
+        lastScrollTop = st;
+    });
 
-        lastScrollTop = scrollTop;
+    // Handle stop scrolling
+    var timeout;
+    $(window).scroll(function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+            $('.header-bottom').removeClass('active');
+        }, 2000);
     });
 });
+// $(document).ready(function () {
+//     var lastScrollTop = 0;
+
+//     $(window).scroll(function () {
+//         var scrollTop = $(this).scrollTop();
+
+//         if (scrollTop > lastScrollTop) {
+//             // Scrolling down
+//             $('header').addClass('hidden');
+//         } else {
+//             // Scrolling to the top
+//             $('header').removeClass('hidden');
+//         }
+
+//         lastScrollTop = scrollTop;
+//     });
+// });
 
 //   Animate to top  
 $('.foot-up .fal').click(function () {
@@ -103,6 +149,7 @@ $(document).ready(function () {
     });
 });
 
+gsap.registerPlugin(ScrollTrigger);
 
 
 // Banner Text In
@@ -131,7 +178,7 @@ gsap.to(".banner .h1-light", 2, {
     stagger: 0.05,
     scrollTrigger: {
         trigger: ".h1-light",
-        start: "top 20%",
+        start: "top 10%",
         scrub: true,
     }
 });

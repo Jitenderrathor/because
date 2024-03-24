@@ -63,7 +63,7 @@ section {
 
 .container-xxl {
   max-width: 1600px !important;
-  padding: 20px;
+  padding: 10px;
 }
 
 a {
@@ -97,6 +97,16 @@ a {
   line-height: 130%;
 }
 
+.h2 {
+  font-family: var(--font-family);
+  font-size: var(--th-fs-h2);
+}
+.h2 .h-light{
+  font-weight: 400;
+}
+.h2 .h-black{
+  font-weight: 700;
+}
 .h3 {
   font-family: var(--font-family);
   font-size: var(--th-fs-h3);
@@ -121,14 +131,19 @@ a {
   display: inline-block;
   position: relative;
   z-index: 2;
-  font-size: 18px;
+  font-size: var(--th-fs-h5);
   font-weight: 600;
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 20px;
   border: 1px solid var(--th-color-4);
-  overflow: hidden !important;
-
+  overflow: hidden ;
   transition: all 0.5s;
+}
+.th-btn .fa-arrow-right {
+  font-size: var(--th-fs-h5) !important;
+  margin-left: 10px;
+  position: relative;
+  z-index: 2;
 }
 /* .th-btn:hover {
   color: white;
@@ -137,13 +152,13 @@ a {
 .th-btn::before {
   content: " ";
   width: 100%;
-  height: 70px;
+  height: 80px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: var(--th-color-6);
   position: absolute;
   z-index: 1;
-  top: 40px;
+  top: 100%;
   left: 0;
   transition: all 0.5s;
 }
@@ -153,16 +168,11 @@ a {
 }
 
 .th-btn:hover:before {
-  top: -30px;
+  top: -40%;
   transition: all 0.5s;
 }
 
-.th-btn .far {
-  font-size: 16px;
-  position: relative;
-  z-index: 2;
-  transition: all 0.5s;
-}
+
 
 /* ------------- base End ------------- */
 
@@ -200,6 +210,9 @@ a {
 
 .th-mode.active .ball {
   transform: translateX(24px);
+}
+main{
+  padding-top: 100px;
 }
 /* Header Scetion Start ------------------------------ */
 /* #header {
@@ -353,19 +366,56 @@ a {
   margin: 0px 8px;
   transition: all 0.5s;
 }
-hb-container .nav-item.active a{
+.hb-container .nav-item a.active{
   color: var(--th-color-1);
 }
 .hb-container .nav-item a:hover {
   color: var(--th-color-1);
 }
+
+.header-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header-top .ht-left{
+  max-width: 270px;
+  transition: all .5s;
+}
+.header-top .ht-left img{
+ width: 100%;
+}
+.header-top .ht-right{
+  max-width: 100px;
+}
+.header-top .ht-right #heart {
+  width: 70px;
+  height: 70px;
+}
+#heart path {
+stroke: var(--th-color-3); /* Change stroke color on hover */
+stroke-dashoffset: 0;
+stroke-dasharray: 55;
+}
+/* @keyframes animate-svg-stroke-1 {
+      0% {
+          stroke-dashoffset: 0;
+      }
+
+      100% {
+          stroke-dashoffset: 55px;
+      }
+  }
+
+#heart:hover path{
+animate:animate-svg-stroke-1 2s linear forwards;
+} */
 /* ------------- Header Scetion  End ------------- */
 
 /* Banner Scetion Start ------------------------------ */
 .banner {
-  margin-top: 40px;
-  padding: 100px 0px;
-  padding-top: 150px;
+  padding: 50px 0px;
 }
 
 .banner .h1 {
@@ -627,3 +677,29 @@ color: var(--th-color-5);
 }
 
 /* ------------- Footer Scetion End ------------- */
+
+
+/* ---------------------================= Service Page ================-------------------  */
+/* service hero start */
+.service-hero{
+  padding: 80px 0;
+}
+.service-hero .h2{
+  color: var(--th-color-1);
+  line-height: 100%;
+}
+.service-hero .h3{
+  color: rgba(115, 115, 115, 0.3);
+}
+.service-hero .h4{
+  max-width: 1200px;
+  width: 100%;
+}
+/* service hero end */
+
+/* service specialize hero start */
+#service-page .specialize .h2 .h-black{
+  color: var(--th-color-1);
+  margin-left: var(--th-fs-h3);
+}
+/* service specialize hero end */
