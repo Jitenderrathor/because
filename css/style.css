@@ -44,6 +44,7 @@ Spacing System
   --th-fs-h4: 32px;
   --th-fs-h5: 22px;
   --font-family: "Red Hat Display", sans-serif;
+  --font-family-2: "AeonikTRIAL-Regular";
 }
 
 /* html {
@@ -101,10 +102,10 @@ a {
   font-family: var(--font-family);
   font-size: var(--th-fs-h2);
 }
-.h2 .h-light{
+.h2 .h-light {
   font-weight: 400;
 }
-.h2 .h-black{
+.h2 .h-black {
   font-weight: 700;
 }
 .h3 {
@@ -136,7 +137,7 @@ a {
   padding: 5px 15px;
   border-radius: 20px;
   border: 1px solid var(--th-color-4);
-  overflow: hidden ;
+  overflow: hidden;
   transition: all 0.5s;
 }
 .th-btn .fa-arrow-right {
@@ -171,8 +172,6 @@ a {
   top: -40%;
   transition: all 0.5s;
 }
-
-
 
 /* ------------- base End ------------- */
 
@@ -211,7 +210,7 @@ a {
 .th-mode.active .ball {
   transform: translateX(24px);
 }
-main{
+main {
   padding-top: 100px;
 }
 /* Header Scetion Start ------------------------------ */
@@ -342,12 +341,12 @@ main{
   bottom: 20px;
   left: 50%;
   z-index: 10;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   padding: 10px 0px;
   border: 1px solid rgba(84, 84, 84, 0.2);
-  transition: all .5s;
+  transition: all 0.5s;
 }
-.header-bottom.active{
+.header-bottom.active {
   transform: translate(-50%, 150%);
 }
 .hb-container .hb-box {
@@ -366,27 +365,27 @@ main{
   margin: 0px 8px;
   transition: all 0.5s;
 }
-.hb-container .nav-item a.active{
+.hb-container .nav-item a.active {
   color: var(--th-color-1);
 }
 .hb-container .nav-item a:hover {
   color: var(--th-color-1);
 }
 
-.header-top{
+.header-top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-.header-top .ht-left{
+.header-top .ht-left {
   max-width: 270px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-.header-top .ht-left img{
- width: 100%;
+.header-top .ht-left img {
+  width: 100%;
 }
-.header-top .ht-right{
+.header-top .ht-right {
   max-width: 100px;
 }
 .header-top .ht-right #heart {
@@ -394,9 +393,9 @@ main{
   height: 70px;
 }
 #heart path {
-stroke: var(--th-color-3); /* Change stroke color on hover */
-stroke-dashoffset: 0;
-stroke-dasharray: 55;
+  stroke: var(--th-color-3); /* Change stroke color on hover */
+  stroke-dashoffset: 0;
+  stroke-dasharray: 55;
 }
 /* @keyframes animate-svg-stroke-1 {
       0% {
@@ -538,11 +537,11 @@ animate:animate-svg-stroke-1 2s linear forwards;
   position: relative;
   overflow: hidden;
 }
-.op-img img{
+.op-img img {
   transition: all 1s;
 }
-.op-img:hover img{
- transform: scale(1.5);
+.op-img:hover img {
+  transform: scale(1.5);
 }
 .opi-overlay {
   width: 100%;
@@ -616,41 +615,41 @@ animate:animate-svg-stroke-1 2s linear forwards;
 footer .foot-menu {
   overflow: hidden;
 }
-footer .f-text{
+footer .f-text {
   border-top: 3px solid var(--th-color-1);
   border-bottom: 3px solid var(--th-color-1);
-  transition: all .2s;
+  transition: all 0.2s;
 }
-footer .f-text:hover{
+footer .f-text:hover {
   background-color: var(--th-color-6);
   border-top: 3px solid var(--th-color-6);
   border-bottom: 3px solid var(--th-color-6);
 }
-footer .f-text .ft-l a{
+footer .f-text .ft-l a {
   font-family: var(--font-family);
   font-size: var(--th-fs-h2);
   color: var(--th-color-2);
   line-height: 120%;
   text-transform: uppercase;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-footer .f-text:hover .ft-l a{
-color: var(--th-color-1);
+footer .f-text:hover .ft-l a {
+  color: var(--th-color-1);
 }
-footer .f-text .ft-l a:hover{
+footer .f-text .ft-l a:hover {
   text-decoration: underline;
-  }
+}
 
 footer .f-text .fas {
-  width:  var(--th-fs-h2);
-  height:  var(--th-fs-h2);
+  width: var(--th-fs-h2);
+  height: var(--th-fs-h2);
   line-height: var(--th-fs-h2);
   font-size: 12px;
   text-align: center;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 footer .f-text:hover .fas {
- color: var(--th-color-1);
+  color: var(--th-color-1);
 }
 
 .foot-up {
@@ -669,37 +668,78 @@ footer .f-text:hover .fas {
   margin: 60px auto 50px;
   cursor: pointer;
   animation: moveMouse 2s infinite;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-.foot-up .fal:hover{
-background-color: var(--th-color-1);
-color: var(--th-color-5);
+.foot-up .fal:hover {
+  background-color: var(--th-color-1);
+  color: var(--th-color-5);
 }
 
 /* ------------- Footer Scetion End ------------- */
 
-
 /* ---------------------================= Service Page ================-------------------  */
 /* service hero start */
-.service-hero{
+.hero {
   padding: 80px 0;
 }
-.service-hero .h2{
+.hero .h2 {
   color: var(--th-color-1);
   line-height: 100%;
 }
-.service-hero .h3{
+.hero .h3 {
   color: rgba(115, 115, 115, 0.3);
 }
-.service-hero .h4{
+.hero .h4 {
   max-width: 1200px;
   width: 100%;
 }
 /* service hero end */
 
 /* service specialize hero start */
-#service-page .specialize .h2 .h-black{
+#service-page .specialize .h2 .h-black {
   color: var(--th-color-1);
   margin-left: var(--th-fs-h3);
 }
 /* service specialize hero end */
+
+/* ---------------------================= Project Page ================-------------------  */
+
+/* Project Hero Scetion Start ------------------------------ */
+.ph-tab-content .h2 {
+  display: none;
+}
+.ph-tab-content .h2.active {
+  display: block;
+}
+.project-hero .phtb {
+  color: var(--th-color-3);
+  font-size: var(--th-fs-h4);
+  font-family: var(--font-family-2);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all .5s;
+}
+.project-hero .phtb .fas {
+  font-size: calc(var(--th-fs-h4) * 0.4);
+  opacity: 0;
+}
+.project-hero .phtb.active {
+  color: var(--th-color-2);
+}
+
+.project-hero .phtb.active .fas {
+  opacity: 1;
+}
+.tab-project{
+  display: none;
+}
+.tab-project.active{
+  display: block;
+}
+/* ------------- Project Hero Scetion End ------------- */
+
+

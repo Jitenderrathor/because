@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'AeonikTRIAL-Regular';
+  src: url(./AeonikTRIAL-Regular.eot);
+  src: url(./AeonikTRIAL-Regular.eot?#iefix) format('embedded-opentype'),
+       url(./AeonikTRIAL-Regular.otf) format('otf'),
+       url(./AeonikTRIAL-Regular.ttf) format('truetype'),
+       url(./AeonikTRIAL-Regular.woff) format('woff');
+}
