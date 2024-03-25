@@ -56,12 +56,21 @@ body {
     font-size: 1.6rem;
 } */
 body {
+  position: relative;
   overflow-x: hidden;
 }
 section {
   overflow: hidden;
 }
-
+.fixed-heart {
+  width: 200px;
+  position: absolute;
+  top: 800px;
+  right: 0;
+}
+.fixed-heart img {
+  width: 100%;
+}
 .container-xxl {
   max-width: 1600px !important;
   padding: 10px;
@@ -594,6 +603,7 @@ animate:animate-svg-stroke-1 2s linear forwards;
 .write-to-us input {
   width: 100%;
   border: none;
+  border-radius: 0;
   border-bottom: 2px solid var(--th-color-4);
   padding: 10px 0px;
 }
@@ -721,7 +731,7 @@ footer .f-text:hover .fas {
   gap: 20px;
   cursor: pointer;
   margin-bottom: 10px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .project-hero .phtb .fas {
   font-size: calc(var(--th-fs-h4) * 0.4);
@@ -734,12 +744,57 @@ footer .f-text:hover .fas {
 .project-hero .phtb.active .fas {
   opacity: 1;
 }
-.tab-project{
+.tab-project {
   display: none;
 }
-.tab-project.active{
+.tab-project.active {
   display: block;
 }
 /* ------------- Project Hero Scetion End ------------- */
 
+/* ---------------------================= Contact Page ================-------------------  */
+.ch-box {
+  padding: 50px 0;
+}
+.ch-box .ch-details {
+  margin: 40px 0px;
+}
+.ch-box .ch-details .h1 .h1-black {
+  font-weight: 700;
+  margin: 0;
+}
 
+.ch-box .ch-details a {
+  font-size: var(--th-fs-h3);
+  font-family: var(--font-family-2);
+  line-height: 100%;
+  position: relative;
+}
+.ch-box .ch-details a::before {
+  content: " ";
+  background-color: var(--th-color-4);
+  width: 200px;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.ch-box .ch-details:nth-child(3) a::before {
+  content: " ";
+  height: 0px;
+}
+.ch-box .ch-details:nth-child(1):hover .h1-light{
+  color: var(--th-color-6);
+}
+.chd-ul{
+  max-width: 300px;
+}
+.chd-ul .fab{
+width: 60px;
+height: 60px;
+line-height: 60px;
+border-radius: 50%;
+text-align: center;
+font-size: var(--th-fs-h4);
+border: 2px solid var(--th-color-4);
+}

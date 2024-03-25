@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Because Us | Contact Page</title>
+    <!-- Website Icon  -->
+    <link rel="Icon" href="image/favicon.png" />
+
+    <!-- bootstrap Css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
+
+    <!-- style Css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-dark.css" />
+
+    <!-- Font css -->
+    <link rel="stylesheet" href="font/aeonik-trial/styles.css" />
+
+    <!-- responsive Css -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- fontawesome Icon  -->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body id="contact-page">
+    <!-- Header Section Start -->
+    <header id="header">
+
+    </header>
+    <!-- Header Section End -->
+
+    <!-- main section start  -->
+    <main>
+        <!-- Service Section Start -->
+        <section class="hero contact-hero">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="h2">
+                            <span class="h-light"> Lets build something </span>
+                            <span class="h-black">great together</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="write-to-us p-0 mt-4">
+                            <form action="submit_form.php" method="post">
+                                <div class="row f-input">
+                                    <div class="col-12 mt-4">
+                                        <input type="text" name="name" class="form-control" placeholder="Full name" id=""
+                                            required />
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <input type="email" name="email" class="form-control" placeholder="Email address" id=""
+                                            required />
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <input type="text" name="company" class="form-control" placeholder="Company / brand"
+                                            id="" required />
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <input type="text" name="message" class="form-control"
+                                            placeholder="Anything we should know about you and your work?" id="" required />
+                                    </div>
+                                    <div class="col-12 mt-5">
+                                        <button class="th-btn">
+                                            <span class="tb-t">Submit</span>
+                                            <i class="far fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                       <div class="ch-box">
+                        <div class="ch-details">
+                            <div class="h1"><span class="h1-black"> SAY </span><span class="h1-light"> <i>HELLO!</i> </span></div>
+                            <a href="mailto:hello@because.systems" target="_blank">hello@because.systems</a>
+                        </div>
+                        <div class="ch-details">
+                            <div class="h1"><span class="h1-black"> CONNECT </span><span class="h1-light"><i>AT</i></span></div>
+                            <a href="tel:9428074633" target="_blank">+91 94280 74633</a>
+                        </div>
+                        <div class="ch-details">
+                            <div class="h1"><span class="h1-black"> FOLLOW </span><span class="h1-light"><i>ON</i></span></div>
+                            <ul class="chd-ul m-0 p-0 d-flex justify-content-between gap-3 list-unstyled">
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fab fa-behance"></i></a></li>
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            </ul>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service Section End -->
+    </main>
+    <!-- main section sed  -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer" id="footer">
+
+    </footer>
+    <!-- Footer Section End -->
+
+    <div class="fixed-heart">
+        <img src="image/fixed-heart.png" alt="">
+    </div>
+    <!-- Js Script File -->
+
+    <!-- ========== jquery Js ========== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ========== AOS Js ========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- ========== main Js ========== -->
+    <script src="js/main.js"></script>
+    <script>
+        $(".phtb").click('on', function(){
+            $(".phtb").removeClass("active");
+            $(".tab-project").removeClass("active");
+            $(".ph-tab-content .h2").removeClass("active");
+            $(this).addClass("active");
+            let phtbId = $(this).attr("id");
+            $(`[data-ph-tab="${phtbId}"]`).addClass("active");
+        })
+    </script>
+</body>
+
+</html>
