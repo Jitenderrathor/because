@@ -606,6 +606,7 @@ animate:animate-svg-stroke-1 2s linear forwards;
   border-radius: 0;
   border-bottom: 2px solid var(--th-color-4);
   padding: 10px 0px;
+  background-color: transparent;
 }
 .write-to-us input::placeholder {
   font-size: 16px;
@@ -783,18 +784,116 @@ footer .f-text:hover .fas {
   content: " ";
   height: 0px;
 }
-.ch-box .ch-details:nth-child(1):hover .h1-light{
+.ch-box .ch-details:nth-child(1):hover .h1-light {
   color: var(--th-color-6);
 }
-.chd-ul{
+.chd-ul {
   max-width: 300px;
 }
-.chd-ul .fab{
-width: 60px;
-height: 60px;
-line-height: 60px;
-border-radius: 50%;
-text-align: center;
-font-size: var(--th-fs-h4);
-border: 2px solid var(--th-color-4);
+.chd-ul .fab {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: var(--th-fs-h4);
+  border: 2px solid var(--th-color-4);
 }
+
+/* ---------------------================= About Page ================-------------------  */
+.ah-text {
+  padding-top: 120px;
+}
+.ah-text .th-p {
+  font-size: var(--th-fs-h5) !important;
+}
+
+/* Our Approach Scetion Start ------------------------------ */
+.our-approach {
+  padding: 150px 0;
+  background-image: linear-gradient(
+    rgba(253, 218, 22, 0),
+    rgba(253, 218, 22, 0.6),
+    rgba(253, 218, 22, 0)
+  );
+}
+
+.oa-box {
+  padding: 50px 0;
+}
+.oa-card {
+  min-height: 300px;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.oa-card .h3 {
+  color: var(--th-color-1);
+  margin-bottom: 30px;
+}
+/* ------------- Our Approach Scetion End ------------- */
+
+/* ---------------------================= Pricing Page ================-------------------  */
+
+/* Pricing Body Scetion Start ------------------------------ */
+#pricing-page {
+  background-image: linear-gradient(
+    rgba(253, 218, 22, 0),
+    rgba(253, 218, 22, 0.6),
+    rgba(253, 218, 22, 0)
+  );
+}
+/* ------------- Pricing Body Scetion End ------------- */
+
+/* Pricing Hero Scetion Start ------------------------------ */
+.pricing-hero .ph-text {
+  padding: 50px 0;
+}
+/* ------------- Pricing Hero Scetion End ------------- */
+
+/* Pricing Main Scetion Start ------------------------------ */
+.pm-box {
+  margin-bottom: 200px;
+}
+.pm-box .pmb-1,
+.pm-box .pmb-2 {
+  padding: 0 40px;
+}
+.pm-box .pmb-1 .pm-card,
+.pm-box .pmb-2 .pm-card {
+  height: 100%;
+}
+.pm-box .pmb-3 {
+  padding: 80px 40px;
+}
+
+.pm-box-2 .pmb-1 .pm-card {
+  border: 1px solid var(--th-color-4);
+}
+.pm-card {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 80px 40px;
+  border-radius: 50px;
+}
+
+.pm-card .pm-line {
+  max-width: 450px;
+  width: 100%;
+  background-color: var(--th-color-4);
+  height: 1px;
+  margin: 30px 0px;
+}
+.pm-card .pm-price {
+  font-size: calc(var(--th-fs-h3) * 1.5);
+  font-family: var(--font-family);
+}
+.pm-card .pm-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pm-card .pm-list ul li {
+  font-size: calc(var(--th-fs-h5) * 0.9);
+  margin: 5px 0;
+}
+/* ------------- Pricing Main Scetion End ------------- */
