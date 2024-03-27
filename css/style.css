@@ -73,7 +73,7 @@ section {
 }
 .container-xxl {
   max-width: 1600px !important;
-  padding: 10px;
+  padding: 0px  20px;
 }
 
 a {
@@ -149,11 +149,11 @@ a {
   overflow: hidden;
   transition: all 0.5s;
 }
-.th-btn .fa-arrow-right {
+.th-btn .far {
   font-size: var(--th-fs-h5) !important;
   margin-left: 10px;
   position: relative;
-  z-index: 2;
+  z-index: 2 ;
 }
 /* .th-btn:hover {
   color: white;
@@ -722,6 +722,10 @@ footer .f-text:hover .fas {
 .ph-tab-content .h2.active {
   display: block;
 }
+.project-hero{
+  padding: 120px 0;
+  height: 100vh;
+}
 .project-hero .phtb {
   color: var(--th-color-3);
   font-size: var(--th-fs-h4);
@@ -831,6 +835,9 @@ footer .f-text:hover .fas {
   color: var(--th-color-1);
   margin-bottom: 30px;
 }
+.oa-card .th-p{
+  font-size: calc(var(--th-fs-h4)*.85);
+}
 /* ------------- Our Approach Scetion End ------------- */
 
 /* ---------------------================= Pricing Page ================-------------------  */
@@ -895,5 +902,102 @@ footer .f-text:hover .fas {
 .pm-card .pm-list ul li {
   font-size: calc(var(--th-fs-h5) * 0.9);
   margin: 5px 0;
+}
+/* ------------- Pricing Main Scetion End ------------- */
+
+/* ---------------------================= Case Study Page ================-------------------  */
+
+/* Pricing Main Scetion Start ------------------------------ */
+#case-study-page .th-p{
+  font-family: var(--font-family-2);
+  font-size: var(--th-fs-h5);
+}
+#case-study-page .h4{
+  font-family: var(--font-family-2);
+}
+.case-study-hero{
+  padding: 50px 0;
+}
+.case-study-logo{
+  padding: 50px 0;
+}
+.case-study-logo img{
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.challenge{
+  padding: 100px 0;
+}
+.challenge .h4{
+font-weight: 700;
+}
+.approach{
+  background-color: var(--th-color-2);
+  padding: 100px 0;
+}
+.approach .a-text{
+ margin-top: 50px;
+}
+.approach .a-text .h4{
+  font-weight: 700;
+  color: var(--th-color-5);
+}
+.approach .a-text .th-p{
+  margin-top: 10px;
+color: var(--th-color-5);
+}
+.approach-slider{
+  margin-top: 100px;
+}
+.as-btn .far{
+  font-size: var(--th-fs-h3);
+  color: var(--th-color-5);
+  cursor: pointer;
+}
+.as-btn .far.grey{
+  color: var(--th-color-3);
+}
+
+.result .r-box{
+  padding: 80px 0;
+}
+.more-project{
+  padding: 100px 0px;
+}
+
+.more-project .mp-btn .far{
+width: 40px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+border-radius: 50%;
+border: 2px solid var(--th-color-2);
+font-size: var(--th-fs-h5);
+color: var(--th-color-2);
+}
+
+
+.mp-slider .slick-slide {
+  margin: 0 15px 0 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.mp-slider .slick-slide,
+.mp-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+  transform: scale(0.7, 0.7);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Active center slide (You can change anything here for cenetr slide)*/
+.mp-slider .slick-center,
+.mp-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+  transform: scale(1.5);
+}
+
+.mp-slider .slick-current.slick-active {
+  transform: scale(1.2, 1.2);
 }
 /* ------------- Pricing Main Scetion End ------------- */

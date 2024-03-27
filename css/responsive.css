@@ -91,6 +91,41 @@
     height: 40px;
     line-height: 40px;
   }
+  .mp-slider .slick-slide {
+    margin: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  .mp-slider .slick-slide,
+  .mp-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+      transform: scale(1, 1);
+  }
+
+  /* Active center slide (You can change anything here for cenetr slide)*/
+  .mp-slider .slick-center,
+  .mp-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+      transform: scale(1);
+  }
+
+  .mp-slider .slick-current.slick-active {
+      transform: scale(1, 1);
+  }
+  .project-hero{
+  padding: 80px 0;
+  height: auto;
+}
+#project-page .our-work{
+  padding: 0px;
+}
+
+#about-page .write-to-us{
+  padding-top: 0;
+}
+.pm-box {
+  margin-bottom: 100px;
+}
+.oa-card .th-p{
+  font-size: var(--th-fs-h4);
+}
 }
 
 /* Medium devices (768px and down) */
@@ -103,8 +138,11 @@
     --th-fs-h4: calc(32px * 0.6);
     --th-fs-h5: calc(22px * 0.75);
   }
-  .hero {
-    padding: 40px 0;
+  .hero, .approach,.more-project{
+    padding: 60px 0;
+  }
+  #service-page .write-to-us {
+    padding-top: 50px;
   }
   main {
     padding-top: 70px;
@@ -135,7 +173,7 @@
     height: 50px;
   }
   .header-bottom {
-    max-width: 400px;
+    max-width: 500px;
     padding: 0;
   }
   .hb-container .hb-box {
@@ -189,9 +227,7 @@
     margin-bottom: 20px;
   }
   /* Pricing Page  */
-  .pm-box {
-    margin-bottom: 150px;
-  }
+ 
   .pm-box .pmb-1,
   .pm-box .pmb-2 {
     padding: 0 20px;
@@ -208,6 +244,9 @@
     padding: 45px 30px;
     border-radius: 50px;
   }
+  .case-study-logo{
+    padding-top: 0;
+  }
 }
 
 /* Small devices (576px and down) */
@@ -220,8 +259,25 @@
     --th-fs-h4: calc(32px * 0.6);
     --th-fs-h5: calc(22px * 0.6);
   }
-   
-  
+  .th-btn:hover:before {
+    top: -90%;
+}
+  .our-work {
+    padding-bottom: 0px;
+}
+
+.write-to-us,.challenge {
+  padding: 50px 0;
+}
+.pricing-main{
+  padding-bottom: 50px;
+}
+#contact-page .ch-details .h1{
+  font-size: calc(180px * 0.29);
+}
+.our-approach{
+  padding: 100px 0;
+}
   .fixed-heart {
     width: 100px;
   }
@@ -242,9 +298,6 @@
     font-size: 22px;
   }
   /* Pricing Page  */
-  .pm-box {
-    margin-bottom: 80px;
-  }
   .pm-box .pmb-1,
   .pm-box .pmb-2,
   .pm-box .pmb-3 {
