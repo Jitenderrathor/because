@@ -44,11 +44,9 @@
                 <div class="row">
                     <div class="col-md-11">
                         <div class="h2">
-                            <span class="h-light">Because may come from all the </span>
-                            <span class="h-black"><i>thinking</i></span>
-                            <span class="h-light"> but we put the </span>
-                            <span class="h-black"><i>heart</i></span>
-                            <span class="h-light"> in all we do </span>
+                            Because may come from all the <b><i> thinking </i></b> but we put the <b><i> heart </i></b>
+                            in all we do
+                            <!-- <span class="h-light">Because may come from all the </span> d<span class="h-black"><i>thinking</i></span><span class="h-light"> but we put the </span><span class="h-black"><i>heart</i></span><span class="h-light"> in all we do </span> -->
                         </div>
                     </div>
                     <div class="col-md-10 col-lg-8">
@@ -84,7 +82,7 @@
                 <div class="oa-box">
                     <div class="row">
                         <div class="col-md-4 col-sm-6 p-3">
-                            <div class="oa-card">
+                            <div class="oa-card ">
                                 <div class="h3"><i>Discover</i></div>
                                 <div class="th-p">Dive into your vision, values, and goals</div>
                             </div>
@@ -107,8 +105,56 @@
         </section>
         <!-- Our Approach Hero Section End -->
 
-         <!-- Write to us Section Start -->
-         <section class="write-to-us" id="write-to-us">
+        <!-- Write to us Section Start -->
+        <section class="write-to-us" id="write-to-us-2">
+            <div class="continer-xxl">
+                <div class="row justify-content-center">
+                    <div class="col-11 col-md-10 d-flex flex-column align-items-center mb-4">
+                        <div class="h1 split">
+                            <span class="h1-light"><b>WRITE</b>
+                                <sapn class="space">&#160;&#160;&#160;</sapn>
+                            </span>
+                            <br />
+                            <span class="h1-black">
+                                <sapn class="space">&#160;&#160;&#160;</sapn> <i> TO US</i>
+                            </span>
+                        </div>
+                        <div class="th-p text-center">
+                            let's start a dialogue! We're eager to connect and assist you.
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-11 col-md-8 col-lg-5">
+                        <form action="submit_form.php" method="post">
+                            <div class="row f-input">
+                                <div class="col-12 mt-4">
+                                    <input type="text" name="name" class="form-control" placeholder="Full name" id=""
+                                        required />
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <input type="email" name="email" class="form-control" placeholder="Email address"
+                                        id="" required />
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <input type="text" name="company" class="form-control" placeholder="Company / brand"
+                                        id="" required />
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <input type="text" name="message" class="form-control"
+                                        placeholder="Anything we should know about you and your work?" id="" required />
+                                </div>
+                                <div class="col-12 mt-5">
+                                    <button class="th-btn">
+                                        <span class="tb-t">Submit</span>
+                                        <i class="far fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- Write to us Section End -->
     </main>
@@ -137,6 +183,126 @@
 
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        const aboutHeroTime = gsap.timeline();
+        let aboutHero = new SplitType(".about-hero .h2", { type: "chars, words" });
+        let aboutWords = aboutHero.words;
+        aboutHeroTime.from(aboutWords, {
+            yPercent: 130,
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out",
+            duration: .5,
+        });
+        aboutHeroTime.from(".ah-text", {
+            xPercent: "-130",
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out",
+            duration: 1,
+        });
+        let mm = gsap.matchMedia();
+        mm.add("(max-width:576px)", () => {
+
+            gsap.from(".oa-box .col-md-4:nth-child(1) .oa-card", {
+                top: "200%",
+                stagger: 0.5,
+                ease: "power2.out",
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".oa-box .col-md-4:nth-child(1) .oa-card",
+                    start: "top 80%",
+// markers:true
+                    // scrub: true,
+                }
+            })
+            gsap.from(".oa-box .col-md-4:nth-child(2) .oa-card", {
+                top: "200%",
+                stagger: 0.5,
+                ease: "power2.out",
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".oa-box .col-md-4:nth-child(2) .oa-card",
+                    start: "top 85%",
+
+                    // scrub: true,
+                }
+            })
+            gsap.from(".oa-box .col-md-4:nth-child(3) .oa-card", {
+                top: "200%",
+                stagger: 0.5,
+                ease: "power2.out",
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".oa-box .col-md-4:nth-child(3) .oa-card",
+                    start: "top 90%",
+
+                    // scrub: true,
+                }
+            })
+        })
+        mm.add("(min-width:768px)", () => {
+            gsap.from(".oa-box .col-md-4:nth-child(2) .oa-card", {
+                left: "-100%",
+                stagger: 0.5,
+                ease: "power2.out",
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".oa-box",
+                    start: "top 35%",
+
+                    // scrub: true,
+                }
+            })
+            gsap.from(".oa-box .col-md-4:nth-child(3) .oa-card", {
+                left: "-200%",
+                stagger: 0.5,
+                ease: "power2.out",
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".oa-box",
+                    start: "top 35%",
+
+                    // scrub: true,
+                }
+            })
+        })
+        // let mySplitText = new SplitType(".our-approach .h1", { type: "chars,words" });
+        // let chars = mySplitText.chars;
+        // gsap.from(chars, {
+        //     yPercent: 130,
+        //     opacity: 0,
+        //     stagger: 0.05,
+        //     ease: "back.out",
+        //     duration: .5,
+        //     scrollTrigger: {
+        //         trigger: ".our-approach",
+        //         start: "top 80%",
+        //         end: "top 20%",
+        //         // scrub:true,
+        //         // markers: true
+        //     }
+        // });
+        // gsap.to(".our-approach .h1 .h1-light", 2, {
+        //     x: "-150vh",
+        //     stagger: 0.05,
+        //     scrollTrigger: {
+        //         trigger: ".our-approach .h1",
+        //         start: "top 10%",
+        //         scrub: true,
+        //     }
+        // });
+        // gsap.to(".our-approach .h1 .h1-black", 2, {
+        //     x: "150vh",
+        //     stagger: 0.05,
+        //     scrollTrigger: {
+        //         trigger: ".our-approach .h1",
+        //         start: "top 20%",
+        //         scrub: true,
+        //     }
+        // });
+    </script>
 </body>
 
 </html>

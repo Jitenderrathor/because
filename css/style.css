@@ -55,6 +55,9 @@ body {
     color: #222;
     font-size: 1.6rem;
 } */
+*{
+  user-select: none;
+}
 body {
   position: relative;
   overflow-x: hidden;
@@ -110,11 +113,15 @@ a {
 .h2 {
   font-family: var(--font-family);
   font-size: var(--th-fs-h2);
+  font-weight: 400;
 }
 .h2 .h-light {
   font-weight: 400;
 }
 .h2 .h-black {
+  font-weight: 700;
+}
+.h2 b {
   font-weight: 700;
 }
 .h3 {
@@ -768,6 +775,9 @@ footer .f-text:hover .fas {
   font-weight: 700;
   margin: 0;
 }
+.ch-box .ch-details .h1 .h1-light {
+transition: all .2s;
+}
 
 .ch-box .ch-details a {
   font-size: var(--th-fs-h3);
@@ -791,6 +801,12 @@ footer .f-text:hover .fas {
 .ch-box .ch-details:nth-child(1):hover .h1-light {
   color: var(--th-color-6);
 }
+.ch-box .ch-details:nth-child(2):hover .h1-light {
+  color: var(--th-color-1);
+}
+.ch-box .ch-details:nth-child(3):hover .h1-light {
+  color: var(--th-color-6);
+}
 .chd-ul {
   max-width: 300px;
 }
@@ -802,6 +818,13 @@ footer .f-text:hover .fas {
   text-align: center;
   font-size: var(--th-fs-h4);
   border: 2px solid var(--th-color-4);
+  transition: all .5s;
+}
+.chd-ul .fab:hover {
+  background-color: var(--th-color-1);
+  box-shadow: rgba(49, 86, 167, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+border: 2px solid var(--th-color-1);
+color: var(--th-color-5);
 }
 
 /* ---------------------================= About Page ================-------------------  */
@@ -829,8 +852,20 @@ footer .f-text:hover .fas {
   min-height: 300px;
   padding: 50px;
   border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
 }
+/* .oa-box .col-md-4:nth-child(1) .oa-card{
+  z-index: 1;
+}
+.oa-box .col-md-4:nth-child(2) .oa-card{
+  left: -100%;
+  z-index: 2;
+}
+.oa-box .col-md-4:nth-child(3) .oa-card{
+  left: -200%;
+  z-index: 3;
+} */
 .oa-card .h3 {
   color: var(--th-color-1);
   margin-bottom: 30px;
