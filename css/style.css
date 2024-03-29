@@ -78,6 +78,26 @@ section {
   max-width: 1600px !important;
   padding: 0px  20px;
 }
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  
+}
+
+.marquee .d-flex {
+  display: inline-block;
+  padding-left: 100%; /* to ensure it moves out of the viewport */
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee:hover p {
+  animation-play-state: paused; /* Pause the animation on hover */
+}
 
 a {
   text-decoration: none;
@@ -509,7 +529,7 @@ animate:animate-svg-stroke-1 2s linear forwards;
 
 /* Specialize Scetion Start ------------------------------ */
 .our-work {
-  padding-bottom: 80px;
+  padding: 80px 0;
 }
 .ow-text {
   padding: 40px;
@@ -718,6 +738,11 @@ footer .f-text:hover .fas {
   color: var(--th-color-1);
   margin-left: var(--th-fs-h3);
 }
+.specialize-service{
+  width: 200%;
+  display: flex;
+  gap: 20px;
+}
 /* service specialize hero end */
 
 /* ---------------------================= Project Page ================-------------------  */
@@ -879,11 +904,7 @@ color: var(--th-color-5);
 
 /* Pricing Body Scetion Start ------------------------------ */
 #pricing-page {
-  background-image: linear-gradient(
-    rgba(253, 218, 22, 0),
-    rgba(253, 218, 22, 0.6),
-    rgba(253, 218, 22, 0)
-  );
+  background: var(--th-color-5);
 }
 /* ------------- Pricing Body Scetion End ------------- */
 

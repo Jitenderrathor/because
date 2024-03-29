@@ -1,0 +1,116 @@
+<div class="continer-xxl">
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-10 d-flex flex-column align-items-center mb-4">
+            <div class="h1 split">
+                <span class="h1-light"><b>WRITE</b>
+                    <sapn class="space">&#160;&#160;&#160;</sapn>
+                </span>
+                <br />
+                <span class="h1-black">
+                    <sapn class="space">&#160;&#160;&#160;</sapn> <i> TO US</i>
+                </span>
+            </div>
+            <div class="th-p text-center">
+                let's start a dialogue! We're eager to connect and assist you.
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-8 col-lg-5">
+            <form action="submit_form.php" method="post">
+                <div class="row f-input">
+                    <div class="col-12 mt-4">
+                        <input type="text" name="name" class="form-control" placeholder="Full name" id=""
+                            required />
+                    </div>
+                    <div class="col-12 mt-4">
+                        <input type="email" name="email" class="form-control" placeholder="Email address"
+                            id="" required />
+                    </div>
+                    <div class="col-12 mt-4">
+                        <input type="text" name="company" class="form-control" placeholder="Company / brand"
+                            id="" required />
+                    </div>
+                    <div class="col-12 mt-4">
+                        <input type="text" name="message" class="form-control"
+                            placeholder="Anything we should know about you and your work?" id="" required />
+                    </div>
+                    <div class="col-12 mt-5">
+                        <button class="th-btn">
+                            <span class="tb-t">Submit</span>
+                            <i class="far fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+     // Contact Section Animation
+          // const conSec = gsap.timeline();
+          let conSplitText = new SplitType("#write-to-us-1 .h1", { type: "chars, words" });
+          let conChars = conSplitText.chars;
+          gsap.from(conChars, {
+              yPercent: 130,
+              opacity: 0,
+              stagger: 0.05,
+              ease: "back.out",
+              duration: .5,
+              scrollTrigger: {
+                  trigger: conChars,
+                  start: "top 80%",
+                  scrub: false,
+                  toggleActions: "restart none none none"
+              }
+          });
+          // Banner Text Out
+          gsap.to("#write-to-us-1 .h1 .h1-light", 2, {
+              x: "-150vh",
+              stagger: 0.05,
+              scrollTrigger: {
+                  trigger: "#write-to-us-1",
+                  start: "top 10%",
+                  scrub: true,
+              }
+          });
+          gsap.to("#write-to-us-1 .h1 .h1-black", 2, {
+              x: "150vh",
+              stagger: 0.05,
+              scrollTrigger: {
+                  trigger: "#write-to-us-1",
+                  start: "top 20%",
+                  scrub: true,
+              }
+          });
+          gsap.from("#write-to-us-1 .th-p", {
+              scale: 2,
+              opacity: 0,
+              stagger: 0.05,
+              ease: "back.out",
+              duration: 1,
+              scrollTrigger: {
+                  trigger: "#write-to-us-1",
+                  start: "top 30%", // Adjust as needed
+                  end: "bottom 60%", // Adjust as needed
+                  // scrub: true,
+                  toggleActions: "restart none none none"
+  
+              },
+          });
+          gsap.from("#write-to-us-1 .f-input .col-12", 1, {
+              x: 100,
+              opacity: 0,
+              ease: "expo.out",
+              delay: 0.5,
+              stagger: 0.3,
+              scrollTrigger: {
+                  trigger: "#write-to-us-1",
+                  start: "top 30%", // Adjust as needed
+                  end: "bottom 60%", // Adjust as needed
+                  // scrub: true,
+                  toggleActions: "restart none none none"
+  
+              },
+          });
+</script>

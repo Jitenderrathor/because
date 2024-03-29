@@ -63,12 +63,17 @@
 
 
         .desktopPhotos {
-            width: 40vw;
-            height: 40vw;
-            border-radius: 20px;
+            width: 50vw;
+            height: 100vw;
+            /* border-radius: 20px; */
             position: relative;
             overflow: hidden;
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+        }
+        .desktopPhotos img{
+width: 100%;
+height: 100%;
+object-fit: cover;
         }
 
         .desktopPhoto {
@@ -134,8 +139,6 @@
             .mobileContent {
                 display: block;
             }
-
-
         }
     </style>
 </head>
@@ -215,14 +218,23 @@
             <!-- desktop content -->
 
             <div class="desktopPhotos">
-                <div class="desktopPhoto red"></div>
-                <div class="desktopPhoto green"></div>
-                <div class="desktopPhoto pink"></div>
-                <div class="desktopPhoto blue"></div>
+                <div class="desktopPhoto red">
+                    <img src="image/ow-1.jpg" alt="">
+                </div>
+                <div class="desktopPhoto green">
+                    <img src="image/ow-2.jpg" alt="">
+                </div>
+                <div class="desktopPhoto pink">
+                    <img src="image/ow-3.jpg" alt="">
+                </div>
+                <div class="desktopPhoto blue">
+                    <img src="image/ow-4.jpg" alt="">
+                </div>
             </div>
 
         </div>
     </div>
+    
 
     <div class="spacer"></div>
     <div class="spacer"></div>
