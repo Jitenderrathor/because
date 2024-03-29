@@ -620,6 +620,44 @@ animate:animate-svg-stroke-1 2s linear forwards;
 .op-img:nth-child(3){
     right: calc(var(--spating)*2);
 } */
+/* our-work Scetion Start ------------------------------ */
+
+#project-page .ow-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* overflow: hidden; */
+}
+
+.ow-wrapper .ow-left {
+  height: 100vh;
+  /* outline:1px solid purple; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ow-wrapper .ow-left,
+.ow-wrapper .ow-right {
+  width: 50%;
+}
+
+#project-page .ow-wrapper .ow-left .ow-img,
+#project-page .ow-wrapper .ow-right .ow-text {
+  width: 100%;
+  height: 100vh;
+}
+
+.ow-left {
+  position: relative;
+}
+
+.ow-left .ow-img {
+  position: absolute;
+}
+
+/* ------------- our-work Scetion End ------------- */
 /* ------------- Our Project Scetion End ------------- */
 
 /* Write to us Scetion Start ------------------------------ */
