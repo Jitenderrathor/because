@@ -61,6 +61,7 @@ body {
 body {
   position: relative;
   overflow-x: hidden;
+  transition: all .5s;
 }
 section {
   overflow: hidden;
@@ -901,11 +902,11 @@ color: var(--th-color-5);
 /* Our Approach Scetion Start ------------------------------ */
 .our-approach {
   padding: 150px 0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     rgba(253, 218, 22, 0),
     rgba(253, 218, 22, 0.6),
     rgba(253, 218, 22, 0)
-  );
+  ); */
 }
 
 .oa-box {
@@ -943,6 +944,7 @@ color: var(--th-color-5);
 /* Pricing Body Scetion Start ------------------------------ */
 #pricing-page {
   background: var(--th-color-5);
+  transition: all .5s;
 }
 /* ------------- Pricing Body Scetion End ------------- */
 

@@ -155,7 +155,6 @@
                     </div>
                 </div>
             </div>
-            
         </section>
         <!-- Write to us Section End -->
     </main>
@@ -269,40 +268,29 @@
                 }
             })
         })
-        // let mySplitText = new SplitType(".our-approach .h1", { type: "chars,words" });
-        // let chars = mySplitText.chars;
-        // gsap.from(chars, {
-        //     yPercent: 130,
-        //     opacity: 0,
-        //     stagger: 0.05,
-        //     ease: "back.out",
-        //     duration: .5,
-        //     scrollTrigger: {
-        //         trigger: ".our-approach",
-        //         start: "top 80%",
-        //         end: "top 20%",
-        //         // scrub:true,
-        //         // markers: true
-        //     }
-        // });
-        // gsap.to(".our-approach .h1 .h1-light", 2, {
-        //     x: "-150vh",
-        //     stagger: 0.05,
-        //     scrollTrigger: {
-        //         trigger: ".our-approach .h1",
-        //         start: "top 10%",
-        //         scrub: true,
-        //     }
-        // });
-        // gsap.to(".our-approach .h1 .h1-black", 2, {
-        //     x: "150vh",
-        //     stagger: 0.05,
-        //     scrollTrigger: {
-        //         trigger: ".our-approach .h1",
-        //         start: "top 20%",
-        //         scrub: true,
-        //     }
-        // });
+        gsap.to("#about-page", {
+            background: "rgba(253, 218, 22, .6)",
+            duration: 2,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: ".our-approach",
+                start: "top top",
+                scrub: false,
+                // markers:true
+                // toggleActions:"restart none none none"
+            }
+        });
+        gsap.to("#about-page", {
+            background: "#ffffff",
+            duration: 2,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: "#write-to-us-2",
+                start: "top top",
+                scrub: false,
+                // toggleActions:"restart none none none"
+            }
+        });
     </script>
     <script>
         // Contact Section Animation

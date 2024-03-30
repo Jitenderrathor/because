@@ -29,7 +29,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
-<body>
+<body id="home-page">
 
     <!-- Header Section Start -->
     <header id="header">
@@ -492,17 +492,17 @@
                 end: () => "+=" + document.querySelector(".our-project").offsetWidth
             }
         });
-        gsap.to(".specialize", {
-            background: "linear-gradient(rgb(49, 87, 167,0.1),rgb(49, 87, 167,0.6),rgb(49, 87, 167,0.1))",
-            duration: 2,
-            ease: "power.out",
-            scrollTrigger: {
-                trigger: ".specialize",
-                start: "top center",
-                // scrub: true,
-                // toggleActions:"restart none none none"
-            }
-        });
+        // gsap.to(".specialize", {
+        //     background: "linear-gradient(rgb(49, 87, 167,0.1),rgb(49, 87, 167,0.6),rgb(49, 87, 167,0.1))",
+        //     duration: 2,
+        //     ease: "power.out",
+        //     scrollTrigger: {
+        //         trigger: ".specialize",
+        //         start: "top center",
+        //         // scrub: true,
+        //         // toggleActions:"restart none none none"
+        //     }
+        // });
 
         let mySplitText = new SplitType(".our-work .h1", { type: "chars,words" });
         let chars = mySplitText.chars;
@@ -539,7 +539,29 @@
             }
         });
 
-
+        gsap.to("#home-page", {
+            background: "rgba(253, 218, 22, .6)",
+            duration: 2,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: ".specialize",
+                start: "top top",
+                scrub: false,
+                // markers:true
+                // toggleActions:"restart none none none"
+            }
+        });
+        gsap.to("#home-page", {
+            background: "#ffffff",
+            duration: 2,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: ".our-work",
+                start: "top top",
+                scrub: false,
+                // toggleActions:"restart none none none"
+            }
+        });
 
 
     </script>
