@@ -27,6 +27,10 @@
 
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Include Slick Slider CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 
 <body id="home-page">
@@ -87,19 +91,19 @@
                             data-aos-duration="1000">
                             <div class="sr-t sr-t-1 d-flex align-items-center gap-2">
                                 <div class="h3">Branding</div>
-                                <i class="far fa-arrow-circle-right"></i>
+                                <!-- <i class="far fa-arrow-circle-right"></i> -->
                             </div>
-                            <div class="th-p">Lorem ipsum dolor sit amet
+                            <!-- <div class="th-p">Lorem ipsum dolor sit amet
                                 consectetur adipisicing elit. Ipsam voluptate sed
-                                totam harum pariatur architecto, veniam esse maxime. Corporis, fugiat.</div>
+                                totam harum pariatur architecto, veniam esse maxime. Corporis, fugiat.</div> -->
                             <hr class="sr-t w-100 w-lg-75" />
                             <div class="sr-t d-flex align-items-center gap-2">
                                 <div class="h3">Web & Development</div>
-                                <i class="far fa-arrow-circle-right"></i>
+                                <!-- <i class="far fa-arrow-circle-right"></i> -->
                             </div>
-                            <div class="th-p">Lorem ipsum dolor sit amet
+                            <!-- <div class="th-p">Lorem ipsum dolor sit amet
                                 consectetur adipisicing elit. Ipsam voluptate sed
-                                totam harum pariatur architecto, veniam esse maxime. Corporis, fugiat.</div>
+                                totam harum pariatur architecto, veniam esse maxime. Corporis, fugiat.</div> -->
                         </div>
                     </div>
                 </div>
@@ -292,15 +296,39 @@
         <!-- Our project Section Start -->
         <section class="our-project">
             <div class="continer-xxl">
-                <div class="row justify-content-center text-center">
-                    <div class="col-10 col-md-5">
+                <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-duration="500">
+                    <div class="col-10 col-sm-8 col-md-6">
                         <div class="h3">
                             Explore <b><i>more projects</i></b>
                         </div>
                     </div>
                 </div>
-                <div class="op-container">
-                    <div class="row w-100">
+                <div class="op-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <div class="op-img">
+                        <img src="image/ow-1.jpg" class="w-100" alt="" />
+                        <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                    </div>
+                    <div class="op-img">
+                        <img src="image/ow-2.jpg" class="w-100" alt="" />
+                        <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                    </div>
+                    <div class="op-img">
+                        <img src="image/ow-3.jpg" class="w-100" alt="" />
+                        <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                    </div>
+                    <div class="op-img">
+                        <img src="image/ow-4.jpg" class="w-100" alt="" />
+                        <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                    </div>
+                    <div class="op-img">
+                        <img src="image/ow-5.jpg" class="w-100" alt="" />
+                        <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                    </div>
+                    <div class="op-img">
+                        <img src="image/ow-6.jpg" class="w-100" alt="" />
+                        <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                    </div>
+                    <!-- <div class="row w-100">
                         <div class="col-6 col-sm-4 p-0 mt-3 position-relative">
                             <div class="op-img">
                                 <img src="image/project-1.jpg" class="w-100" alt="" />
@@ -319,8 +347,26 @@
                                 <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row w-100">
+                        <div class="col-6 col-sm-4 p-0 mt-3 position-relative">
+                            <div class="op-img">
+                                <img src="image/project-1.jpg" class="w-100" alt="" />
+                                <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 p-0 mt-3 position-relative">
+                            <div class="op-img">
+                                <img src="image/project-2.jpg" class="w-100" alt="" />
+                                <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 p-0 mt-3 position-relative d-none d-sm-block">
+                            <div class="op-img">
+                                <img src="image/project-3.jpg" class="w-100" alt="" />
+                                <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="row w-100">
                         <div class="col-6 col-sm-4 p-0 mt-3 position-relative order-sm-1 d-none d-sm-block">
                             <div class="op-img">
                                 <img src="image/project-2.jpg" class="w-100" alt="" />
@@ -380,7 +426,7 @@
                                 <div class="opi-overlay"><a href="#"><i class="fal fa-link"></i></a></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -458,12 +504,49 @@
     <!-- ========== AOS Js ========== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- ========== Slick Js ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
 
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
+    <script>
+        $('.op-container').slick({
+            dots: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    </script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
         // More Project Section 
@@ -479,7 +562,7 @@
                 // scrub: true,
             },
         });
-        let sections = gsap.utils.toArray(".op-container .row");
+        /* let sections = gsap.utils.toArray(".op-container .row");
 
         gsap.to(sections, {
             xPercent: -100 * (sections.length - 1),
@@ -491,7 +574,7 @@
                 snap: 1 / (sections.length - 1),
                 end: () => "+=" + document.querySelector(".our-project").offsetWidth
             }
-        });
+        }); */
         // gsap.to(".specialize", {
         //     background: "linear-gradient(rgb(49, 87, 167,0.1),rgb(49, 87, 167,0.6),rgb(49, 87, 167,0.1))",
         //     duration: 2,
@@ -541,19 +624,19 @@
 
         gsap.to("#home-page", {
             background: "rgba(253, 218, 22, .6)",
-            duration: 2,
+            duration: 1,
             ease: "power.out",
             scrollTrigger: {
                 trigger: ".specialize",
                 start: "top top",
                 scrub: false,
                 // markers:true
-                // toggleActions:"restart none none none"
+                toggleActions:"restart none none none"
             }
         });
         gsap.to("#home-page", {
             background: "#ffffff",
-            duration: 2,
+            duration: 1,
             ease: "power.out",
             scrollTrigger: {
                 trigger: ".our-work",

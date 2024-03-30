@@ -6,7 +6,7 @@
     --th-fs-h2: calc(100px * 0.9);
     --th-fs-h3: calc(40px);
     --th-fs-h4: calc(32px);
-    --th-fs-h5: calc(22px);
+    --th-fs-h5: calc(20px);
   }
 }
 /* Extra large devices (1200px and down) */
@@ -17,7 +17,7 @@
     --th-fs-h2: calc(100px * 0.8);
     --th-fs-h3: calc(40px * 0.8);
     --th-fs-h4: calc(32px);
-    --th-fs-h5: calc(22px);
+    --th-fs-h5: calc(20px);
   }
 
   .ntb {
@@ -55,7 +55,7 @@
     --th-fs-h2: calc(100px * 0.6);
     --th-fs-h3: calc(40px * 0.65);
     --th-fs-h4: calc(32px * 0.6);
-    --th-fs-h5: calc(22px * 0.8);
+    --th-fs-h5: calc(20px * 0.8);
   }
   .fixed-heart {
     width: 150px;

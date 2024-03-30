@@ -34,7 +34,7 @@ $('#checkbox').change(function () {
     }
 });
 
-// Specialize Accordin 
+/* // Specialize Accordin 
 $(".sr-t+.th-p").slideUp()
 $(".sr-t").click(function () {
     $(this).toggleClass("active");
@@ -44,7 +44,7 @@ $(".sr-t").click(function () {
 $(".th-mode").click(function () {
     $(this).toggleClass("active");
     $("body").toggleClass("dark");
-})
+}) */
 // Nav Scroll On Up Toggler
 $(document).ready(function () {
     var lastScrollTop = 0;
@@ -56,24 +56,24 @@ $(document).ready(function () {
         } else {
             $(".ht-left img").removeClass("d-none");
         }
-        if (st > lastScrollTop) {
+        /* if (st > lastScrollTop) {
             // Downscroll code
             $('.header-bottom').addClass('active');
         } else {
             // Upscroll code
             $('.header-bottom').removeClass('active');
         }
-        lastScrollTop = st;
+        lastScrollTop = st; */
     });
 
-    // Handle stop scrolling
+    /* // Handle stop scrolling
     var timeout;
     $(window).scroll(function () {
         clearTimeout(timeout);
         timeout = setTimeout(function () {
             $('.header-bottom').removeClass('active');
         }, 2000);
-    });
+    }); */
 });
 
 
