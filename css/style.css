@@ -571,11 +571,11 @@ animate:animate-svg-stroke-1 2s linear forwards;
 .op-row {
   height: 500px;
 }
-.op-container {
-  /* width: 400%; */
-  /* display: flex; */
-  /* flex-wrap: nowrap; */
-}
+/* .op-container {
+  width: 400%;
+  display: flex;
+  flex-wrap: nowrap;
+} */
 .op-img {
   position: relative;
   overflow: hidden;
@@ -787,7 +787,15 @@ footer .f-text:hover .fas {
 .specialize-service{
   width: 200%;
   display: flex;
-  gap: 20px;
+  /* gap: 20px; */
+}
+.ss-box{
+  flex: 1;
+  padding: 20px;
+}
+.ss-box .h4{
+  font-weight: 700;
+  margin-bottom: 0;
 }
 /* service specialize hero end */
 
@@ -855,14 +863,14 @@ transition: all .2s;
 
 .ch-box .ch-details a {
   font-size: var(--th-fs-h3);
-  font-family: var(--font-family-2);
+  font-family: var(--font-family);
   line-height: 100%;
   position: relative;
 }
 .ch-box .ch-details a::before {
   content: " ";
   background-color: var(--th-color-4);
-  width: 200px;
+  width: 100%;
   height: 1px;
   position: absolute;
   bottom: 0;

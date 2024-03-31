@@ -622,7 +622,7 @@
             }
         });
 
-        gsap.to("#home-page", {
+        /* gsap.to("#home-page", {
             background: "rgba(253, 218, 22, .6)",
             duration: 1,
             ease: "power.out",
@@ -643,6 +643,36 @@
                 start: "top top",
                 scrub: false,
                 // toggleActions:"restart none none none"
+            }
+        }); */
+        gsap.to("#home-page", {
+            background: "rgba(253, 218, 22, .6)",
+            duration: 2,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: ".specialize",
+                start: "top center",
+                scrub: true,
+            }
+        });
+        gsap.to("#home-page", {
+            background: "#ffffff",
+            duration: 2,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: ".our-work",
+                start: "top center",
+                scrub: true,
+            }
+        });
+        gsap.to("#home-page", {
+            background: "#ffffff",
+            duration: 2,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: ".banner",
+                start: "top center",
+                scrub: true,
             }
         });
 
