@@ -55,13 +55,13 @@ body {
     color: #222;
     font-size: 1.6rem;
 } */
-*{
+* {
   user-select: none;
 }
 body {
   position: relative;
   overflow-x: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 section {
   overflow: hidden;
@@ -77,13 +77,12 @@ section {
 }
 .container-xxl {
   max-width: 1600px !important;
-  padding: 0px  20px;
+  padding: 0px 20px;
 }
 .marquee {
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
-  
 }
 
 .marquee .d-flex {
@@ -92,8 +91,12 @@ section {
   animation: marquee 20s linear infinite;
 }
 @keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .marquee:hover p {
@@ -181,7 +184,7 @@ a {
   font-size: var(--th-fs-h5) !important;
   margin-left: 10px;
   position: relative;
-  z-index: 2 ;
+  z-index: 2;
 }
 /* .th-btn:hover {
   color: white;
@@ -428,7 +431,7 @@ main {
 }
 .header-top .ht-right {
   max-width: 100px;
-  opacity: .3;
+  opacity: 0.3;
 }
 .header-top .ht-right #heart {
   width: 70px;
@@ -784,16 +787,16 @@ footer .f-text:hover .fas {
   color: var(--th-color-1);
   margin-left: var(--th-fs-h3);
 }
-.specialize-service{
+.specialize-service {
   width: 200%;
   display: flex;
   /* gap: 20px; */
 }
-.ss-box{
+.ss-box {
   flex: 1;
   padding: 20px;
 }
-.ss-box .h4{
+.ss-box .h4 {
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -808,7 +811,7 @@ footer .f-text:hover .fas {
 .ph-tab-content .h2.active {
   display: block;
 }
-.project-hero{
+.project-hero {
   padding: 120px 0;
   height: 100vh;
 }
@@ -824,7 +827,7 @@ footer .f-text:hover .fas {
   margin-bottom: 10px;
   transition: all 0.5s;
 }
-.phtb-text{
+.phtb-text {
   font-family: var(--font-family);
 }
 .project-hero .phtb .fas {
@@ -858,7 +861,7 @@ footer .f-text:hover .fas {
   margin: 0;
 }
 .ch-box .ch-details .h1 .h1-light {
-transition: all .2s;
+  transition: all 0.2s;
 }
 
 .ch-box .ch-details a {
@@ -900,13 +903,14 @@ transition: all .2s;
   text-align: center;
   font-size: var(--th-fs-h4);
   border: 2px solid var(--th-color-4);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .chd-ul .fab:hover {
   background-color: var(--th-color-1);
-  box-shadow: rgba(49, 86, 167, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-border: 2px solid var(--th-color-1);
-color: var(--th-color-5);
+  box-shadow: rgba(49, 86, 167, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border: 2px solid var(--th-color-1);
+  color: var(--th-color-5);
 }
 
 /* ---------------------================= About Page ================-------------------  */
@@ -952,8 +956,8 @@ color: var(--th-color-5);
   color: var(--th-color-1);
   margin-bottom: 30px;
 }
-.oa-card .th-p{
-  font-size: calc(var(--th-fs-h4)*.85);
+.oa-card .th-p {
+  font-size: calc(var(--th-fs-h4) * 0.85);
 }
 /* ------------- Our Approach Scetion End ------------- */
 
@@ -962,7 +966,7 @@ color: var(--th-color-5);
 /* Pricing Body Scetion Start ------------------------------ */
 #pricing-page {
   background: var(--th-color-5);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 /* ------------- Pricing Body Scetion End ------------- */
 
@@ -1022,77 +1026,91 @@ color: var(--th-color-5);
 /* ---------------------================= Case Study Page ================-------------------  */
 
 /* Pricing Main Scetion Start ------------------------------ */
-#case-study-page .th-p{
+#case-study-page .th-p {
   font-family: var(--font-family-2);
   font-size: var(--th-fs-h5);
 }
-#case-study-page .h4{
+#case-study-page .h4 {
   font-family: var(--font-family-2);
 }
-.case-study-hero{
+.case-study-hero {
   padding: 50px 0;
 }
-.case-study-logo{
+.case-study-logo {
   padding: 50px 0;
 }
-.case-study-logo img{
+.c-suite-impact .case-study-logo {
+background-color: #B4B4B4;
+}
+.c-suite-impact .case-study-hero {
+  padding-bottom: 0px;
+}
+.case-study-logo img {
   max-width: 500px;
   width: 100%;
   margin: auto;
   display: block;
 }
+/* .dlb-img {
+  width: 100%;
+  height: 100%;
+}
+.dlb-img img {
+  width: 100%;
+  object-fit: cover;
+} */
 
-.challenge{
+.challenge {
   padding: 100px 0;
 }
-.challenge .h4{
-font-weight: 700;
+.challenge .h4 {
+  font-weight: 700;
 }
-.approach{
+.approach {
   background-color: var(--th-color-2);
   padding: 100px 0;
 }
-.approach .a-text{
- margin-top: 50px;
+.approach .a-text {
+  margin-top: 50px;
 }
-.approach .a-text .h4{
+.approach .a-text .h4 {
   font-weight: 700;
   color: var(--th-color-5);
 }
-.approach .a-text .th-p{
+.approach .a-text .th-p {
   margin-top: 10px;
-color: var(--th-color-5);
+  color: var(--th-color-5);
 }
-.approach-slider{
+.approach-slider {
   margin-top: 100px;
 }
-.as-btn .far{
+.as-btn .far {
   font-size: var(--th-fs-h3);
   color: var(--th-color-5);
   cursor: pointer;
 }
-.as-btn .far.grey{
+.as-btn .far.grey {
   color: var(--th-color-3);
 }
 
-.result .r-box{
+.result .r-box {
   padding: 80px 0;
 }
-.more-project{
+.more-project {
   padding: 100px 0px;
 }
 
-.more-project .mp-btn .far{
-width: 40px;
-height: 40px;
-line-height: 40px;
-text-align: center;
-border-radius: 50%;
-border: 2px solid var(--th-color-2);
-font-size: var(--th-fs-h5);
-color: var(--th-color-2);
+.more-project .mp-btn .far {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid var(--th-color-2);
+  font-size: var(--th-fs-h5);
+  color: var(--th-color-2);
+  cursor: pointer;
 }
-
 
 .mp-slider .slick-slide {
   margin: 0 15px 0 0;
@@ -1100,14 +1118,18 @@ color: var(--th-color-2);
 }
 
 .mp-slider .slick-slide,
-.mp-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+.mp-slider
+  .slick-slide[aria-hidden="true"]:not(.slick-cloned)
+  ~ .slick-cloned[aria-hidden="true"] {
   transform: scale(0.7, 0.7);
   transition: all 0.4s ease-in-out;
 }
 
 /* Active center slide (You can change anything here for cenetr slide)*/
 .mp-slider .slick-center,
-.mp-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+.mp-slider
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+  + .slick-cloned[aria-hidden="true"] {
   transform: scale(1.5);
 }
 

@@ -244,8 +244,29 @@
     padding: 45px 30px;
     border-radius: 50px;
   }
+  /* case study page  */
+  .result .r-box {
+    padding: 50px 0;
+}
   .case-study-logo{
     padding-top: 0;
+  }
+  .case-study-logo .col-md-5,
+  .case-study-logo .col-md-7{
+    padding: 10px !important;
+  }
+  .approach-slider {
+    margin-top: 70px;
+}
+.more-project .h3{
+padding: 20px 0 !important;
+
+}
+.c-suite-impact .case-study-logo {
+ padding-top: 50px ;
+  }
+.c-suite-impact .case-study-logo .col-md-5{
+ margin-top: 20px;
   }
 }
 

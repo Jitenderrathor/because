@@ -19,7 +19,7 @@ $(window).on('load', function () {
     $('.header-bottom').removeClass('active');
 })
 
-//  Dark and light mode 
+/* //  Dark and light mode 
 // Listen for the change event on the checkbox
 $('#checkbox').change(function () {
     // Check if the checkbox is checked
@@ -32,7 +32,7 @@ $('#checkbox').change(function () {
         $('body').removeClass('dark').addClass('light');
         $('.mode-text').removeClass('dark').addClass('light').text('Light');
     }
-});
+}); */
 
 /* // Specialize Accordin 
 $(".sr-t+.th-p").slideUp()
