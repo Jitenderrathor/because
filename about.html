@@ -251,9 +251,10 @@
                 scrollTrigger: {
                     trigger: ".oa-box",
                     start: "top 35%",
-                    toggleActions: "play restart play restart"
-
+                    end: "bottom 70%",
                     // scrub: true,
+                    toggleActions: "play none none reverse"
+
                 }
             })
             gsap.from(".oa-box .col-md-4:nth-child(3) .oa-card", {
@@ -264,9 +265,10 @@
                 scrollTrigger: {
                     trigger: ".oa-box",
                     start: "top 35%",
-                    toggleActions: "play restart play restart"
-
+                    end: "bottom 70%",
                     // scrub: true,
+                    toggleActions: "play none none reverse"
+
                 }
             })
         })
@@ -276,11 +278,8 @@
             ease: "power.out",
             scrollTrigger: {
                 trigger: ".our-approach",
-                start: "top top",
-                scrub: false,
-                
-                // markers:true
-                // toggleActions:"restart none none none"
+                start: "top center",
+                scrub: true,
             }
         });
         gsap.to("#about-page", {
@@ -289,9 +288,18 @@
             ease: "power.out",
             scrollTrigger: {
                 trigger: "#write-to-us-2",
-                start: "top top",
-                scrub: false,
-                // toggleActions:"restart none none none"
+                start: "top center",
+                scrub: true,
+            }
+        });
+        gsap.to("#about-page", {
+            background: "#ffffff",
+            duration: 2,
+            ease: "power.out",
+            scrollTrigger: {
+                trigger: ".about-hero",
+                start: "top center",
+                scrub: true,
             }
         });
     </script>
