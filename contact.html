@@ -42,7 +42,7 @@
         <section class="hero contact-hero">
             <div class="container-xxl">
                 <div class="row">
-                    <div class="col-md-10 col-lg-8">
+                    <div class="col-md-10 col-lg-9">
                         <div class="h2">
                             Lets build something <b><i>great together</i></b>
                             <!-- <span class="h-light"> Lets build something </span>
@@ -54,20 +54,21 @@
                             <form action="submit_form.php" method="post">
                                 <div class="row f-input">
                                     <div class="col-12 mt-4">
-                                        <input type="text" name="name" class="form-control" placeholder="Full name" id=""
-                                            required />
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                        <input type="email" name="email" class="form-control" placeholder="Email address" id=""
-                                            required />
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                        <input type="text" name="company" class="form-control" placeholder="Company / brand"
+                                        <input type="text" name="name" class="form-control" placeholder="Full name"
                                             id="" required />
                                     </div>
                                     <div class="col-12 mt-4">
+                                        <input type="email" name="email" class="form-control"
+                                            placeholder="Email address" id="" required />
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <input type="text" name="company" class="form-control"
+                                            placeholder="Company / brand" id="" required />
+                                    </div>
+                                    <div class="col-12 mt-4">
                                         <input type="text" name="message" class="form-control"
-                                            placeholder="Anything we should know about you and your work?" id="" required />
+                                            placeholder="Anything we should know about you and your work?" id=""
+                                            required />
                                     </div>
                                     <div class="col-12 mt-5">
                                         <button class="th-btn">
@@ -80,25 +81,31 @@
                         </div>
                     </div>
                     <div class="col-12">
-                       <div class="ch-box">
-                        <div class="ch-details" data-aos="zoom-in-left" data-aos-duration="800">
-                            <div class="h1"><span class="h1-black"> SAY </span><span class="h1-light"> <i>HELLO!</i> </span></div>
-                            <a href="mailto:hello@because.systems" target="_blank">hello@because.systems</a>
+                        <div class="ch-box">
+                            <div class="ch-details" data-aos="zoom-in-left" data-aos-duration="800">
+                                <div class="h1"><span class="h1-black"> SAY </span><span class="h1-light"> <i>HELLO!</i>
+                                    </span></div>
+                            </div>
+                            <div class="d-flex flex-column flex-md-row gap-4" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="200">
+                                <div class="ch-details">
+                                <div class="h3">CONNECT AT</div>
+                                <div class="mt-3">
+                                    <a href="tel:9428074633" target="_blank">+91 94280 74633</a>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="mailto:hello@because.systems" target="_blank">hello@because.systems</a>
+                                </div>
+                            </div>
+                            <div class="ch-details">
+                                <div class="h3">FOLLOW ON</div>
+                                <ul class="chd-ul m-0 p-0 d-flex justify-content-between gap-3 list-unstyled">
+                                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href=""><i class="fab fa-behance"></i></a></li>
+                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                </ul>
+                            </div> </div>
                         </div>
-                        <div class="ch-details" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="200">
-                            <div class="h1"><span class="h1-black"> CONNECT </span><span class="h1-light"><i>AT</i></span></div>
-                            <a href="tel:9428074633" target="_blank">+91 94280 74633</a>
-                        </div>
-                        <div class="ch-details" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="200">
-                            <div class="h1"><span class="h1-black"> FOLLOW </span><span class="h1-light"><i>ON</i></span></div>
-                            <ul class="chd-ul m-0 p-0 d-flex justify-content-between gap-3 list-unstyled">
-                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href=""><i class="fab fa-behance"></i></a></li>
-                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                            </ul>
-                        </div>
-                       </div>
                     </div>
                 </div>
             </div>
@@ -140,7 +147,7 @@
         });
     </script>
     <script>
-        $(".phtb").click('on', function(){
+        $(".phtb").click('on', function () {
             $(".phtb").removeClass("active");
             $(".tab-project").removeClass("active");
             $(".ph-tab-content .h2").removeClass("active");

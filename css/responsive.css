@@ -96,36 +96,40 @@
     transition: all 0.4s ease-in-out;
   }
   .mp-slider .slick-slide,
-  .mp-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
-      transform: scale(1, 1);
+  .mp-slider
+    .slick-slide[aria-hidden="true"]:not(.slick-cloned)
+    ~ .slick-cloned[aria-hidden="true"] {
+    transform: scale(1, 1);
   }
 
   /* Active center slide (You can change anything here for cenetr slide)*/
   .mp-slider .slick-center,
-  .mp-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
-      transform: scale(1);
+  .mp-slider
+    .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"] {
+    transform: scale(1);
   }
 
   .mp-slider .slick-current.slick-active {
-      transform: scale(1, 1);
+    transform: scale(1, 1);
   }
-  .project-hero{
-  padding: 80px 0;
-  height: auto;
-}
-#project-page .our-work{
-  padding: 0px;
-}
+  .project-hero {
+    padding: 80px 0;
+    height: auto;
+  }
+  #project-page .our-work {
+    padding: 0px;
+  }
 
-#about-page .write-to-us{
-  padding-top: 0;
-}
-.pm-box {
-  margin-bottom: 100px;
-}
-.oa-card .th-p{
-  font-size: var(--th-fs-h4);
-}
+  #about-page .write-to-us {
+    padding-top: 0;
+  }
+  .pm-box {
+    margin-bottom: 100px;
+  }
+  .oa-card .th-p {
+    font-size: var(--th-fs-h4);
+  }
 }
 
 /* Medium devices (768px and down) */
@@ -138,7 +142,9 @@
     --th-fs-h4: calc(32px * 0.6);
     --th-fs-h5: calc(22px * 0.75);
   }
-  .hero, .approach,.more-project{
+  .hero,
+  .approach,
+  .more-project {
     padding: 60px 0;
   }
   #service-page .write-to-us {
@@ -172,12 +178,11 @@
     width: 50px;
     height: 50px;
   }
-  .header-top .container-xxl{
-padding: 0 10px;
+  .header-top .container-xxl {
+    padding: 0 10px;
   }
   .header-bottom {
     max-width: 500px;
-    padding: 0;
   }
   .hb-container .hb-box {
     padding: 10px 5px;
@@ -230,7 +235,7 @@ padding: 0 10px;
     margin-bottom: 20px;
   }
   /* Pricing Page  */
- 
+
   .pm-box .pmb-1,
   .pm-box .pmb-2 {
     padding: 0 20px;
@@ -250,26 +255,25 @@ padding: 0 10px;
   /* case study page  */
   .result .r-box {
     padding: 50px 0;
-}
-  .case-study-logo{
+  }
+  .case-study-logo {
     padding-top: 0;
   }
   .case-study-logo .col-md-5,
-  .case-study-logo .col-md-7{
+  .case-study-logo .col-md-7 {
     padding: 10px !important;
   }
   .approach-slider {
     margin-top: 70px;
-}
-.more-project .h3{
-padding: 20px 0 !important;
-
-}
-.c-suite-impact .case-study-logo {
- padding-top: 50px ;
   }
-.c-suite-impact .case-study-logo .col-md-5{
- margin-top: 20px;
+  .more-project .h3 {
+    padding: 20px 0 !important;
+  }
+  .c-suite-impact .case-study-logo {
+    padding-top: 50px;
+  }
+  .c-suite-impact .case-study-logo .col-md-5 {
+    margin-top: 20px;
   }
 }
 
@@ -283,31 +287,59 @@ padding: 20px 0 !important;
     --th-fs-h4: calc(32px * 0.6);
     --th-fs-h5: calc(22px * 0.6);
   }
+
+
+  .header-bottom{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 20px 0px;
+    background-color: #fff !important;
+    transform: translateX(100%);
+    transition: all .5s;
+  }
+  .header-bottom.active{
+    transform: translateX(0%);
+  }
+  .header-bottom .hb-box{
+    height: 100vh;
+    margin-top: 100px;
+  }
+  .header-bottom .hb-box ul{
+    width: 100%;
+  }
+  .header-bottom .hb-box li{
+    text-align: center;
+    margin: 20px 0px;
+  }
+  .header-bottom .hb-box li a{
+font-size: var(--th-fs-h3);
+  }
   .th-btn:hover:before {
     top: -90%;
-}
+  }
   .our-work {
     padding-bottom: 0px;
-}
+  }
 
-.write-to-us,.challenge {
-  padding: 50px 0;
-}
-.pricing-main{
-  padding-bottom: 50px;
-}
-#contact-page .ch-details .h1{
-  font-size: calc(180px * 0.29);
-}
-.our-approach{
-  padding: 100px 0;
-}
+  .write-to-us,
+  .challenge {
+    padding: 50px 0;
+  }
+  .pricing-main {
+    padding-bottom: 50px;
+  }
+  #contact-page .ch-details .h1 {
+    font-size: calc(180px * 0.29);
+  }
+  .our-approach {
+    padding: 100px 0;
+  }
   .fixed-heart {
     width: 100px;
-  }
-  /* Navigation  */
-  .header-bottom {
-    max-width: 375px;
   }
   .nav-logo {
     max-width: 140px;

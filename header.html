@@ -1,59 +1,21 @@
-<!-- <div class="container-xxl">
-            <div class="navbar">
-                <div class="nav-logo"><img src="image/logo.png" alt="" /></div>
-                <div class="nav-toggle">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div class="theme me-3">
-                            <div class="th-mode">
-                                <i class="fas fa-sun"></i>
-                                <i class="fas fa-moon"></i>
-                                <span class="ball"></span>
-                            </div>
-                        </div>
-                        <div class="nav-toggle-btn">
-                            <div class="ntb ntb-t"></div>
-                            <div class="ntb ntb-m"></div>
-                            <div class="ntb ntb-b"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav-container">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
 <div class="header-top">
+    <div id="myBar"></div>
     <div class="container-xxl">
         <div class="d-flex justify-content-between align-items-center">
             <div class="ht-left"><a href="index.html"><img src="image/logo.png" alt=""></a></div>
             <div class="ht-right">
-                <div id="heart">
-                    <svg viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" stroke="gray" stroke-width="2" id="heart-svg" d="M12 20V5.99995M12 5.99995C10.2006 3.90293 7.19377 3.25485 4.93923 5.17509C2.68468 7.09533 2.36727 10.3059 4.13778 12.577C5.60984 14.4652 10.0648 18.4477 11.5249 19.7366C11.6882 19.8808 11.7699 19.9529 11.8652 19.9813C11.9483 20.006 12.0393 20.006 12.1225 19.9813C12.2178 19.9529 12.2994 19.8808 12.4628 19.7366C13.9229 18.4477 18.3778 14.4652 19.8499 12.577C21.6204 10.3059 21.3417 7.07513 19.0484 5.17509C16.7551 3.27505 13.7994 3.90293 12 5.99995Z"
-                             />
-                    </svg>
-                   
-                </div>
-               
+                <i class="fas fa-bars d-inline d-sm-none"></i>
             </div>
         </div>
     </div>
 
 </div>
 <div class="header-bottom">
-    <div class="hb-container d-flex justify-content-between align-items-center">
-        <!-- <div class="hb-box hb-left">
-                    <a href="index.html"><img src="image/logo.png" class="w-100" alt=""></a>
-                </div> -->
+    <div class="w-100 d-flex justify-content-end p-2 d-block d-sm-none"><i class="fas fa-times"></i></div>
+    <div class="hb-container d-sm-flex justify-content-between align-items-center">
         <div class="hb-box hb-mid">
-            <ul class="list-unstyled p-0 m-0 d-flex justify-content-between align-items-center">
-                <li class="nav-item me-3 me-md-5"><a href="index.html" data-nav-item="home-page"><img
+            <ul class="list-unstyled p-0 m-0 d-sm-flex justify-content-between align-items-center">
+                <li class="nav-item me-4 d-none d-sm-inline"><a href="index.html" data-nav-item="home-page"><img
                             src="image/logo.png" class="w-100" alt=""></a></li>
                 <li class="nav-item"><a href="project.html" data-nav-item="project-page">Projects</a></li>
                 <li class="nav-item"><a href="about.html" data-nav-item="about-page">About</a></li>
@@ -62,37 +24,19 @@
                 <li class="nav-item"><a href="pricing.html" data-nav-item="pricing-page">Pricing</a></li>
             </ul>
         </div>
-        <!-- <div class="hb-box hb-right">
-                    <div class="theme me-3">
-                        <div class="th-mode">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                            <span class="ball"></span>
-                        </div>
-                    </div>
-                </div> -->
     </div>
 </div>
 <script>
-    var path = document.getElementById('heart-svg');
-        var pathLength = path.getTotalLength();
-        path.style.strokeDasharray = pathLength + ' ' + pathLength;
-        path.style.strokeDashoffset = pathLength;
-        var boundingRect = path.getBoundingClientRect(); // Store bounding rect outside scroll event for performance
-
-        window.addEventListener('scroll', function (e) {
-            var scrollPercentage = (document.documentElement.scrollTop || document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-            var drawLength = pathLength * scrollPercentage;
-            path.style.strokeDashoffset = pathLength - drawLength;
-            if (scrollPercentage >= 0.99) {
-                path.style.strokeDasharray = 'none';
-            } else {
-                path.style.strokeDasharray = pathLength + ' ' + pathLength;
-            }
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            var height = $(document).height() - $(window).height();
+            var scrolled = (scroll / height) * 100;
+            $('#myBar').width(scrolled + "%");
         });
+        $("#header .fa-times, #header .fa-bars").click(function(){
+            $(".header-bottom").toggleClass("active");
+        })
+    });
+
 </script>
-<!-- <div class="d-none">
-    <svg  viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-        <path fill="none" stroke="gray" stroke-width="2" id="heart-svg" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"/>
-    </svg>
-   </div> -->
