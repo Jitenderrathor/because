@@ -60,6 +60,10 @@
   .fixed-heart {
     width: 150px;
   }
+  #home-page .fixed-heart {
+    top: 760px;
+}
+
   .header-bottom {
     max-width: 600px;
   }
@@ -142,6 +146,9 @@
     --th-fs-h4: calc(32px * 0.6);
     --th-fs-h5: calc(22px * 0.75);
   }
+  #home-page .fixed-heart {
+    top: 650px;
+}
   .hero,
   .approach,
   .more-project {
