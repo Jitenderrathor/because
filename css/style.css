@@ -458,7 +458,6 @@ main {
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
-  opacity: 0;
   transition: all 0.5s;
 }
 .header-top .ht-right .fas:hover,.header-bottom .fas:hover {
