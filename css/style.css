@@ -68,7 +68,17 @@ section {
 }
 #home-page .fixed-heart {
   top: 960px;
-  opacity: .4;
+}
+#about-page .fixed-heart {
+  top: 700px;
+}
+#pricing-page .fixed-heart {
+  top: 600px;
+  width: 200px;
+}
+#contact-page .fixed-heart {
+  top: 600px;
+  width: 200px;
 }
 
 .fixed-heart {
@@ -76,6 +86,7 @@ section {
   position: absolute;
   top: 800px;
   right: 0;
+  opacity: .4;
 }
 .fixed-heart img {
   width: 100%;
@@ -922,6 +933,10 @@ footer .f-text:hover .fas {
 }
 .ch-box .ch-details {
   margin: 40px 0px;
+}
+.ch-box .d-flex .ch-details{
+  margin: 0;
+  margin-top: 20px;
 }
 .ch-box .d-flex .ch-details .h3 {
   color: var(--th-color-2);
