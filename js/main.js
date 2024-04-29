@@ -1,6 +1,7 @@
 // Loading Common Element Using External File
 $("#header").load("header.html");
 $("#footer").load("footer.html");
+$("#all-project-slider").load("project-slider.html");
 // $(".write-to-us").load("con-form.html");
 
 

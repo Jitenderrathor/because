@@ -147,7 +147,7 @@ a {
 .th-p {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: var(--th-fs-h5);
+  font-size: var(--th-fs-h5) !important;
   line-height: 130%;
 }
 
@@ -423,7 +423,7 @@ main {
 } */
 .hb-container .nav-item a {
   font-family: var(--font-family);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 100%;
   text-align: left;
@@ -541,6 +541,10 @@ animate:animate-svg-stroke-1 2s linear forwards;
     rgba(253, 218, 22, 0.6),
     rgba(253, 218, 22, 0)
   ); */
+}
+.specialize .h5{
+  text-transform: none !important;
+  font-weight: 500;
 }
 .mouse-icon {
   margin: 150px 0;
@@ -1177,6 +1181,12 @@ transform: translateX(0%);
 /* ---------------------================= Case Study Page ================-------------------  */
 
 /* Pricing Main Scetion Start ------------------------------ */
+#case-study-page .h2 {
+  font-size: calc(var(--th-fs-h2)*.75);
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 #case-study-page .th-p {
   font-family: var(--font-family-2);
   font-size: var(--th-fs-h5);
@@ -1185,7 +1195,7 @@ transform: translateX(0%);
   font-family: var(--font-family-2);
 }
 .case-study-hero {
-  padding: 50px 0;
+  padding-top: 50px;
 }
 .case-study-logo {
   padding: 50px 0;
@@ -1202,6 +1212,7 @@ transform: translateX(0%);
   margin: auto;
   display: block;
 }
+
 /* .dlb-img {
   width: 100%;
   height: 100%;
@@ -1214,77 +1225,36 @@ transform: translateX(0%);
 .challenge {
   padding: 100px 0;
 }
+.challenge.architectural-systems {
+background-color: #E2F1FA;
+}
+.challenge.talent-plug {
+background-color: #EFF4F8;
+}
+.challenge.property-data-cube {
+background-color: #FEEEE6;
+}
+.challenge.tiles-center {
+background-color: #003068;
+}
+.challenge.c-suite-impact {
+background-color: #F8FBF4;
+}
+.challenge.tiles-center .h4,
+.challenge.tiles-center .th-p{
+color: var(--th-color-5);
+}
 .challenge .h4 {
   font-weight: 700;
 }
-.approach {
-  background-color: var(--th-color-2);
-  padding: 100px 0;
+.csh-img #youtube{
+  width: 100%;
+  height: 600px;
 }
-.approach .a-text {
-  margin-top: 50px;
+.get-in-touch{
+  padding: 80px 0px 40px 0px;
 }
-.approach .a-text .h4 {
-  font-weight: 700;
-  color: var(--th-color-5);
-}
-.approach .a-text .th-p {
-  margin-top: 10px;
-  color: var(--th-color-5);
-}
-.approach-slider {
-  margin-top: 100px;
-}
-.as-btn .far {
-  font-size: var(--th-fs-h3);
-  color: var(--th-color-5);
-  cursor: pointer;
-}
-.as-btn .far.grey {
-  color: var(--th-color-3);
-}
-
-.result .r-box {
-  padding: 80px 0;
-}
-.more-project {
-  padding: 100px 0px;
-}
-
-.more-project .mp-btn .far {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
-  border: 2px solid var(--th-color-2);
-  font-size: var(--th-fs-h5);
-  color: var(--th-color-2);
-  cursor: pointer;
-}
-
-.mp-slider .slick-slide {
-  margin: 0 15px 0 0;
-  transition: all 0.4s ease-in-out;
-}
-
-.mp-slider .slick-slide,
-.mp-slider
-  .slick-slide[aria-hidden="true"]:not(.slick-cloned)
-  ~ .slick-cloned[aria-hidden="true"] {
-  transform: scale(0.7, 0.7);
-  transition: all 0.4s ease-in-out;
-}
-
-/* Active center slide (You can change anything here for cenetr slide)*/
-.mp-slider .slick-center,
-.mp-slider
-  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
-  + .slick-cloned[aria-hidden="true"] {
-  transform: scale(1.5);
-}
-
-.mp-slider .slick-current.slick-active {
-  transform: scale(1.2, 1.2);
+.get-in-touch .far{
+  transform: rotate(0deg);
 }
 /* ------------- Pricing Main Scetion End ------------- */
