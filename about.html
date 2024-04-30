@@ -42,7 +42,7 @@
         <section class="hero about-hero">
             <div class="container-xxl">
                 <div class="row">
-                    <div class="col-md-11">
+                    <div class="col-md-12">
                         <div class="h2">
                             Where Heart Meets Strategy: <i><b>Crafting Authentic Brand Experiences</b></i>
                         </div>
@@ -113,8 +113,10 @@
                                 <sapn class="space">&#160;&#160;&#160;</sapn> <i> TO US</i>
                             </span>
                         </div>
+                    </div>
+                    <div class="col-11 col-md-8 col-lg-5">
                         <div class="th-p text-center">
-                            let's start a dialogue! We're eager to connect and assist you.
+                            Let's start a conversation! We're excited to connect and explore how we can bring your brand to life.
                         </div>
                     </div>
                 </div>
@@ -178,6 +180,24 @@
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
     <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var ourApproachOffsetTop = $('.our-approach').offset().top;
+                var writeToUsOffsetTop = $('#write-to-us-2').offset().top;
+                var scrollTop = $(window).scrollTop();
+
+                if (scrollTop >= ourApproachOffsetTop && scrollTop < writeToUsOffsetTop) {
+                    $('body').addClass("bg-yellow").removeClass("bg-white");
+                } else if (scrollTop >= writeToUsOffsetTop) {
+                    $('body').addClass("bg-white").removeClass("bg-yellow");
+                } else {
+                    $('body').addClass("bg-white").removeClass("bg-yellow");
+                }
+            });
+
+        });
+    </script>
+    <script>
         gsap.registerPlugin(ScrollTrigger);
         const aboutHeroTime = gsap.timeline();
         let aboutHero = new SplitType(".about-hero .h2", { type: "chars, words" });
@@ -189,16 +209,15 @@
             ease: "back.out",
             duration: .5,
         });
-        aboutHeroTime.from(".ah-text", {
+        /* aboutHeroTime.from(".ah-text", {
             xPercent: "-130",
             opacity: 0,
             stagger: 0.05,
             ease: "back.out",
             duration: 1,
-        });
+        }); */
         let mm = gsap.matchMedia();
         mm.add("(max-width:576px)", () => {
-
             gsap.from(".oa-box .col-md-4:nth-child(1) .oa-card", {
                 top: "200%",
                 stagger: 0.5,
@@ -269,36 +288,6 @@
                 }
             })
         })
-        gsap.to("#about-page", {
-            background: "rgba(253, 218, 22, .6)",
-            duration: 2,
-            ease: "power.out",
-            scrollTrigger: {
-                trigger: ".our-approach",
-                start: "top center",
-                scrub: true,
-            }
-        });
-        gsap.to("#about-page", {
-            background: "#ffffff",
-            duration: 2,
-            ease: "power.out",
-            scrollTrigger: {
-                trigger: "#write-to-us-2",
-                start: "top center",
-                scrub: true,
-            }
-        });
-        gsap.to("#about-page", {
-            background: "#ffffff",
-            duration: 2,
-            ease: "power.out",
-            scrollTrigger: {
-                trigger: ".about-hero",
-                start: "top center",
-                scrub: true,
-            }
-        });
     </script>
     <script>
         // Contact Section Animation

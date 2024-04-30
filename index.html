@@ -54,7 +54,7 @@
         <!-- our specialize Section Start -->
         <section class="specialize" id="specialize">
             <div class="container-xxl">
-                <div class="row justify-content-between align-items-start pb-md-5 mb-md-5">
+                <div class="row justify-content-between align-items-start">
                     <div class="col-lg-7">
                         <div class="specialize-left" data-aos="fade-right" data-aos-duration="1000">
                             <div class="h3">
@@ -96,7 +96,7 @@
         <!-- our specialize Section End -->
 
         <!-- our work Section Start -->
-        <section class="our-work">
+        <section class="our-work" id="home-our-work">
             <div class="container-xxl">
                 <div class="row justify-content-center">
                     <div class="col-10 d-flex justify-content-center split-con">
@@ -157,9 +157,9 @@
                             <div class="h3 h3-2">
                                 Bringing vision to reality through façade expertise and inspired design.
                             </div>
-                            <!-- <div class="h5">
-                                Branding, Web design
-                            </div> -->
+                            <div class="h5">
+                                Web design 
+                            </div>
                             <div class="ow-btn">
                                 <a href="architectural-systems.html" class="th-btn">
                                     <span class="tb-t">View project</span>
@@ -171,9 +171,9 @@
                             <div class="h3 h3-2">
                                 Transforming spaces with top-quality tiles and large-size porcelain slabs.
                             </div>
-                            <!-- <div class="h5">
+                            <div class="h5">
                                 Web design
-                            </div> -->
+                            </div>
                             <div class="ow-btn">
                                 <a href="tiles-center.html" class="th-btn">
                                     <span class="tb-t">View project</span>
@@ -183,11 +183,11 @@
                         <div class="ow-text">
                             <div class="h4 h3-1">Lodestone</div>
                             <div class="h3 h3-2">
-                                A website which excels in digital solutions, trusted by top tech leaders.
+                                Powering top-tier digital solutions for global tech leaders.
                             </div>
-                            <!-- <div class="h5">
-                                Web design
-                            </div> -->
+                            <div class="h5">
+                                Branding
+                            </div>
                             <div class="ow-btn">
                                 <a href="lodestone.html" class="th-btn">
                                     <span class="tb-t">View project</span>
@@ -210,9 +210,9 @@
                             <div class="h3 h3-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                                 Bringing vision to reality through façade expertise and inspired design.
                             </div>
-                            <!-- <div class="h5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                                Branding, Web design
-                            </div> -->
+                            <div class="h5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                                Web design
+                            </div>
                             <div class="ow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                                 <a href="architectural-systems.html" class="th-btn">
                                     <span class="tb-t">View project</span>
@@ -233,9 +233,9 @@
                             <div class="h3 h3-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                                 Transforming spaces with top-quality tiles and large-size porcelain slabs.
                             </div>
-                            <!-- <div class="h5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                            <div class="h5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                                 Web design
-                            </div> -->
+                            </div>
                             <div class="ow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                                 <a href="tiles-center.html" class="th-btn">
                                     <span class="tb-t">View project</span>
@@ -254,11 +254,11 @@
                         <div class="ow-text">
                             <div class="h4 h3-1" data-aos="fade-up" data-aos-duration="500">Lodestone</div>
                             <div class="h3 h3-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                                A website which excels in digital solutions, trusted by top tech leaders.
+                                Powering top-tier digital solutions for global tech leaders.
                             </div>
-                            <!-- <div class="h5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                                Web design
-                            </div> -->
+                            <div class="h5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                                Branding
+                            </div>
                             <div class="ow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                                 <a href="lodestone.html" class="th-btn">
                                     <span class="tb-t">View project</span>
@@ -283,7 +283,7 @@
                 </div>
             </div>
             <div id="all-project-slider">
-                
+
             </div>
         </section>
         <!-- Our project Section End -->
@@ -302,8 +302,11 @@
                                 <sapn class="space">&#160;&#160;&#160;</sapn> <i> TO US</i>
                             </span>
                         </div>
+                    </div>
+                    <div class="col-11 col-md-8 col-lg-5">
                         <div class="th-p text-center">
-                            let's start a dialogue! We're eager to connect and assist you.
+                            Let's start a conversation! We're excited to connect and explore how we can bring your brand to life.
+    
                         </div>
                     </div>
                 </div>
@@ -368,7 +371,24 @@
 
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
-  
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var specializeOffsetTop = $('#specialize').offset().top;
+                var ourWorkOffsetTop = $('#home-our-work').offset().top;
+                var scrollTop = $(window).scrollTop();
+
+                if (scrollTop >= specializeOffsetTop && scrollTop < ourWorkOffsetTop) {
+                    $('body').addClass("bg-yellow").removeClass("bg-white");
+                } else if (scrollTop >= ourWorkOffsetTop) {
+                    $('body').addClass("bg-white").removeClass("bg-yellow");
+                } else {
+                    $('body').addClass("bg-white").removeClass("bg-yellow");
+                }
+            });
+
+        });
+    </script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
         // More Project Section 
@@ -384,30 +404,6 @@
                 // scrub: true,
             },
         });
-        /* let sections = gsap.utils.toArray(".op-container .row");
-
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".our-project",
-                pin: true,
-                scrub: 1,
-                snap: 1 / (sections.length - 1),
-                end: () => "+=" + document.querySelector(".our-project").offsetWidth
-            }
-        }); */
-        // gsap.to(".specialize", {
-        //     background: "linear-gradient(rgb(49, 87, 167,0.1),rgb(49, 87, 167,0.6),rgb(49, 87, 167,0.1))",
-        //     duration: 2,
-        //     ease: "power.out",
-        //     scrollTrigger: {
-        //         trigger: ".specialize",
-        //         start: "top center",
-        //         // scrub: true,
-        //         // toggleActions:"restart none none none"
-        //     }
-        // });
 
         let mySplitText = new SplitType(".our-work .h1", { type: "chars,words" });
         let chars = mySplitText.chars;
@@ -444,30 +440,9 @@
             }
         });
 
+
+
         /* gsap.to("#home-page", {
-            background: "rgba(253, 218, 22, .6)",
-            duration: 1,
-            ease: "power.out",
-            scrollTrigger: {
-                trigger: ".specialize",
-                start: "top top",
-                scrub: false,
-                // markers:true
-                toggleActions:"restart none none none"
-            }
-        });
-        gsap.to("#home-page", {
-            background: "#ffffff",
-            duration: 1,
-            ease: "power.out",
-            scrollTrigger: {
-                trigger: ".our-work",
-                start: "top top",
-                scrub: false,
-                // toggleActions:"restart none none none"
-            }
-        }); */
-        gsap.to("#home-page", {
             background: "rgba(253, 218, 22)",
             duration: 2,
             ease: "power.out",
@@ -496,7 +471,7 @@
                 start: "top center",
                 scrub: false,
             }
-        });
+        }); */
 
 
     </script>

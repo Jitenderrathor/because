@@ -51,12 +51,12 @@ $(document).ready(function () {
     var lastScrollTop = 0;
 
     $(window).scroll(function (event) {
-        var st = $(this).scrollTop();
+       /*  var st = $(this).scrollTop();
         if (st > 0) {
             $(".ht-left img").addClass("d-none");
         } else {
             $(".ht-left img").removeClass("d-none");
-        }
+        } */
         /* if (st > lastScrollTop) {
             // Downscroll code
             $('.header-bottom').addClass('active');
