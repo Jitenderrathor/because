@@ -451,9 +451,10 @@ main {
 }
 
 .header-top {
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  left: 0;
+  left: 0; */
+  width: 100%;
   z-index: 10;
   padding: 20px 0px;
   width: 100%;
@@ -513,10 +514,10 @@ animate:animate-svg-stroke-1 2s linear forwards;
 /* ------------- Header Scetion  End ------------- */
 
 /* Banner Scetion Start ------------------------------ */
-/* .banner {
-  padding: 0px  0px 0px;
-  padding-bottom: 50px;
-} */
+.banner {
+  /* padding: 0px  0px 0px; */
+  /* padding-bottom: 50px; */
+}
 
 .banner .h1 {
   color: var(--th-color-1);
