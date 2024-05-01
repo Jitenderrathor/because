@@ -328,7 +328,10 @@
     transform: translateX(100%);
     transition: all 0.5s;
   }
-  .header-bottom.active {
+  .pm-border-box{
+    padding: 20px 0px;
+  }
+  .header-bottom.active { 
     transform: translateX(0%);
   }
   .header-bottom .hb-box {

@@ -105,7 +105,7 @@
                 <div class="h5">
                     Web design
                 </div>
-               
+
                 <div class="ow-btn">
                     <a href="property-data-cube.html" class="th-btn">
                         <span class="tb-t">View project</span>
@@ -191,11 +191,19 @@
         </div>
     </div>
 </div>
+<div class="op-slider-arrow">
+    <div class="col-12 d-flex justify-content-end">
+        <div class="mt-4 me-4">
+            <i class="far fa-chevron-left m-2"></i>
+            <i class="far fa-chevron-right m-2"></i>
+        </div>
+    </div>
+</div>
 
 <script>
     $('.op-container').slick({
         dots: false,
-        infinite: true,
+        infinite: false,
         autoplay: true,
         autoplaySpeed: 800,
         slidesToShow: 3,
@@ -226,4 +234,37 @@
             }
         ]
     });
+    $('.fa-chevron-left').on('click', function () {
+        $('.op-container').slick('slickPrev');
+    });
+
+    $('.fa-chevron-right').on('click', function () {
+        $('.op-container').slick('slickNext');
+    });
+    /* // Add event listeners for beforeChange and setPosition
+    $('.op-container').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        updateArrows(slick, nextSlide);
+    });
+
+    // Initial update for arrows
+    updateArrows($('.op-container').slick('getSlick'), 0);
+
+    // Function to update arrow classes
+    function updateArrows(slick, currentSlideIndex) {
+        var $leftArrow = $('.op-slider-arrow .fa-chevron-left');
+        var $rightArrow = $('.op-slider-arrow .fa-chevron-right');
+
+        // Remove 'last' class from both arrows
+        $leftArrow.removeClass('last');
+        $rightArrow.removeClass('last');
+
+        // If on first slide, add 'last' class to left arrow
+        if (currentSlideIndex === 0) {
+            $leftArrow.addClass('last');
+        }
+        // If on last slide, add 'last' class to right arrow
+        else if (currentSlideIndex === slick.slideCount - 1) {
+            $rightArrow.addClass('last');
+        }
+    } */
 </script>

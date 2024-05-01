@@ -66,19 +66,21 @@
         <!-- Pricing Hero Section End -->
 
         <!-- Pricing Main Section Start -->
-        <section class="pricing-main">
+        <section class="pricing-main" id="pricing-main-page">
 
             <div class="container-xxl">
                 <div class="row justify-content-center">
-                    <div class="col-md-11 col-lg-10 mb-5">
-                        <div class="pm-tab-box">
-                            <div class="pmtb-btn" id="pm-box-1"><div class="h4">BRANDING</div></div>
-                            <div class="pmtb-btn" id="pm-box-2"><div class="h4">WEB DEVELOPMENT</div></div>
-                            <div class="pmtb-btn" id="pm-box-3"><div class="h4">ANIMATED VIDEOS</div></div>
-                            <div class="pmtb-btn-line"></div>
+                    <div class="col-md-11 col-lg-8 mb-5">
+                        <div class="pm-border-box">
+                            <div class="pm-tab-box">
+                                <div class="pmtb-btn" id="pm-box-1"><div class="h5">BRANDING</div></div>
+                                <div class="pmtb-btn" id="pm-box-2"><div class="h5">WEB DEVELOPMENT</div></div>
+                                <div class="pmtb-btn" id="pm-box-3"><div class="h5">ANIMATED VIDEOS</div></div>
+                                <div class="pmtb-btn-line"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-11 col-lg-10 pm-box pm-box-1" data-price-tab="pm-box-1">
+                    <div class="col-md-11 col-lg-8 pm-box pm-box-1" data-price-tab="pm-box-1">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="pm-card">
@@ -108,7 +110,7 @@
                                         </ul>
                                     </div>
                                     <div class="pm-btn">
-                                        <a href="service.html" class="th-btn">
+                                        <a href="branding-project.html" class="th-btn">
                                             <span class="tb-t">Start Your Branding Project</span>
                                             <i class="far fa-arrow-right"></i></a>
                                     </div>
@@ -116,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-11 col-lg-10 pm-box pm-box-2 d-none" data-price-tab="pm-box-2">
+                    <div class="col-md-11 col-lg-8 pm-box pm-box-2 d-none" data-price-tab="pm-box-2">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="pm-card">
@@ -144,7 +146,7 @@
                                         </ul>
                                     </div>
                                     <div class="pm-btn">
-                                        <a href="service.html" class="th-btn">
+                                        <a href="web-project.html" class="th-btn">
                                             <span class="tb-t">Start Your Web Project</span>
                                             <i class="far fa-arrow-right"></i></a>
                                     </div>
@@ -152,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-11 col-lg-10 pm-box pm-box-3 d-none" data-price-tab="pm-box-3">
+                    <div class="col-md-11 col-lg-8 pm-box pm-box-3 d-none" data-price-tab="pm-box-3">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="pm-card">
@@ -182,7 +184,7 @@
                                         </ul>
                                     </div>
                                     <div class="pm-btn">
-                                        <a href="service.html" class="th-btn">
+                                        <a href="animated-videos-project.html" class="th-btn">
                                             <span class="tb-t">Start your Animated Video Project</span>
                                             <i class="far fa-arrow-right"></i></a>
                                     </div>
@@ -196,15 +198,15 @@
                 <div class="container-xxl">
                     <div class="row">
                         <div class="col-md-10">
-                            <div class="h3 mb-4" data-aos="fade-up" data-aos-duration="500">Have unique requirements?
+                            <div class="h3" data-aos="fade-up" data-aos-duration="500">Have unique requirements?
                             </div>
-                            <div class="th-p mt-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                            <div class="th-p mt-md-4" data-aos="fade-up" data-aos-duration="500">
                                 <b>We thrive on challenges!</b> If your needs don't fit into a standard package, we're
                                 here to help. Our team excels at creating bespoke solutions that integrate multiple
                                 service areas. From intricate web features to comprehensive brand strategies and
                                 specialized video projects, we tailor our approach to fit your specific objectives.
                             </div>
-                            <div class="rq-btn">
+                            <div class="rq-btn" data-aos="fade-up" data-aos-duration="500">
                                 <a href="contact.html" class="th-btn">
                                     <span class="tb-t">Talk to Our Team</span>
                                     <i class="far fa-arrow-right"></i></a>
@@ -279,9 +281,9 @@
     </footer>
     <!-- Footer Section End -->
 
-    <div class="fixed-heart">
+    <!-- <div class="fixed-heart">
         <img src="image/fixed-heart.png" alt="">
-    </div>
+    </div> -->
     <!-- Js Script File -->
 
     <!-- ========== jquery Js ========== -->
@@ -296,6 +298,23 @@
 
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var pricingMainOffsetTop = $('#pricing-main-page').offset().top;
+                var writeToUsOffsetTop = $('#write-to-us-5').offset().top;
+                var scrollTop = $(window).scrollTop();
+
+                if (scrollTop >= pricingMainOffsetTop && scrollTop < writeToUsOffsetTop) {
+                    $('body').addClass("bg-yellow").removeClass("bg-white");
+                } else if (scrollTop >= writeToUsOffsetTop) {
+                    $('body').addClass("bg-white").removeClass("bg-yellow");
+                } else {
+                    $('body').addClass("bg-white").removeClass("bg-yellow");
+                }
+            });
+        });
+    </script>
     <script>
         $(".pmtb-btn").click(function(){
             $(".pmtb-btn").removeClass("active");
@@ -316,14 +335,13 @@
             ease: "back.out",
             duration: .5,
         });
-        pricingHeroTime.from(".ph-text", {
+       /*  pricingHeroTime.from(".ph-text", {
             xPercent: "-130",
             opacity: 0,
             stagger: 0.05,
             ease: "back.out",
             duration: 1,
         });
-
         gsap.to("#pricing-page", {
             background: "rgba(253, 218, 22)",
             // duration: 1  ,
@@ -353,9 +371,9 @@
                 start: "top center",
                 scrub: true,
             }
-        });
+        });*/
     </script>
-    
+     
     <script>
         // Contact Section Animation
         // const conSec = gsap.timeline();

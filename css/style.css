@@ -65,7 +65,7 @@ body {
 }
 body.bg-yellow{
   /* background-color: rgba(253, 218, 22); */
-  background-color: rgba(253,234,129,255);
+  background-color: rgba(253,234,129,255) !important;
 }
 body.bg-white{
   background-color: #ffffff;
@@ -230,6 +230,9 @@ a {
 }
 .bg-yellow .th-btn::before{
   background-color: var(--th-color-5);
+}
+.bg-yellow .pm-btn .th-btn::before{
+  background-color: var(--th-color-6);
 }
 .tb-t {
   position: relative;
@@ -699,6 +702,21 @@ animate:animate-svg-stroke-1 2s linear forwards;
 .op-img:hover .opi-overlay {
   opacity: 1;
 }
+.op-slider-arrow .far{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: var(--th-fs-h5);
+  cursor: pointer;
+  background-color: var(--th-color-1);
+  color: var(--th-color-5);
+}
+.op-slider-arrow .far.last{
+  opacity: .6;
+}
+
 /* .op-img .opi-overlay a .fal:hover {
 
 } */
@@ -859,14 +877,17 @@ footer .f-text:hover .fas {
   max-width: 1200px;
   width: 100%;
 }
+.specialize-service{
+  /* position: relative; */
+}
 .ss-box {
-  height: 585px;
+  height: 530px;
   display: flex;
   justify-content: center;
   background-color: var(--th-color-1);
-  padding: 60px 30px;
+  padding: 30px 30px;
   border-radius: 50px;
-  margin-top: 50px;
+  margin-bottom: 30px;
 }
 .ss-box .h3 .h-light {
   color: var(--th-color-6);
@@ -898,12 +919,6 @@ footer .f-text:hover .fas {
 /* ---------------------================= Project Page ================-------------------  */
 
 /* Project Hero Scetion Start ------------------------------ */
-/* .ph-tab-content .h2 {
-  display: none;
-}
- .ph-tab-content .h2.active {
-  display: block;
-} */
 .project-hero {
   padding: 100px 0 150px 0;
 }
@@ -961,7 +976,11 @@ footer .f-text:hover .fas {
   font-family: var(--font-family);
   line-height: 100%;
   position: relative;
+  transition: all .5s;
 }
+/* .ch-box .ch-details.cont a:hover{
+  color: var(--th-color-6);
+} */
 /* .ch-box .ch-details a::before {
   content: " ";
   background-color: var(--th-color-4);
@@ -1004,8 +1023,8 @@ footer .f-text:hover .fas {
   transition: all 0.5s;
 }
 .chd-ul .fab:hover {
-  background-color: var(--th-color-1);
-  border: 2px solid var(--th-color-1) !important;
+  background-color: var(--th-color-6);
+  border: 2px solid var(--th-color-6) !important;
   color: var(--th-color-5);
   box-shadow: rgba(49, 86, 167, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -1064,6 +1083,10 @@ right: 30px;
 /* ------------- Pricing Body Scetion End ------------- */
 
 /* Pricing Hero Scetion Start ------------------------------ */
+.pricing-hero{
+  padding: 0px;
+  padding-top: 80px;
+}
 .pricing-hero .ph-text {
   padding: 50px 0;
 }
@@ -1074,10 +1097,10 @@ right: 30px;
 
 /* Pricing Main Scetion Start ------------------------------ */
 .pricing-main {
-  padding: 100px 0px;
+  padding: 180px 0px 0px 0px;
 }
 .pm-box {
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
 }
 .pm-box .pmb-3 {
   padding: 80px 60px;
@@ -1091,21 +1114,26 @@ right: 30px;
   padding: 80px 40px;
   border-radius: 50px;
 }
+.pm-border-box{
+  border: 2px solid var(--th-color-1);
+  border-radius: 20px;
+  padding: 0px 20px;
+}
 .pm-tab-box {
   display: flex;
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  border: 2px solid var(--th-color-1);
-  /* border-radius: 20px; */
   position: relative;
-  /* padding: 0px 20px; */
 }
 .pm-tab-box .pmtb-btn {
   flex: 1;
   padding: 20px 0px;
   cursor: pointer;
   color: var(--th-color-1);
+}
+.pm-tab-box .pmtb-btn .h5{
+  font-weight: 600;
 }
 .pm-tab-box .pmtb-btn-line {
   position: absolute;
@@ -1117,15 +1145,15 @@ right: 30px;
   transform: translateY(50%);
   transition: all .5s;
 }
-.pm-tab-box .pmtb-btn:nth-child(1):hover ~ .pmtb-btn-line,
+/* .pm-tab-box .pmtb-btn:nth-child(1):hover ~ .pmtb-btn-line, */
 .pm-tab-box .pmtb-btn:nth-child(1).active ~ .pmtb-btn-line {
 transform: translateX(0%);
 }
-.pm-tab-box .pmtb-btn:nth-child(2):hover ~ .pmtb-btn-line,
+/* .pm-tab-box .pmtb-btn:nth-child(2):hover ~ .pmtb-btn-line, */
 .pm-tab-box .pmtb-btn:nth-child(2).active ~ .pmtb-btn-line {
   transform: translateX(100%);
 }
-.pm-tab-box .pmtb-btn:nth-child(3):hover ~ .pmtb-btn-line,
+/* .pm-tab-box .pmtb-btn:nth-child(3):hover ~ .pmtb-btn-line, */
 .pm-tab-box .pmtb-btn:nth-child(3).active ~ .pmtb-btn-line {
   transform: translateX(200%);
 }
@@ -1137,15 +1165,18 @@ transform: translateX(0%);
   margin: 30px 0px;
 }
 .pm-card .h3 {
+  font-family: var(--font-family);
   color: var(--th-color-1);
   font-weight: 500;
 }
 .pm-card .h4 {
   color: var(--th-color-1);
+  font-family: var(--font-family);
   margin-top: 30px;
-  font-weight: 700;
+  font-weight: 900;
 }
 .pm-card .th-p {
+  font-family: var(--font-family);
   font-weight: 600;
   line-height: 200%;
   margin-top: 10px;
@@ -1160,12 +1191,15 @@ transform: translateX(0%);
   margin: 0;
 }
 .pm-card .pm-list ul li {
-  font-size: calc(var(--th-fs-h5) * 1.25);
+  font-family: var(--font-family);
+  font-size: var(--th-fs-h5);
   font-weight: 700;
   line-height: 200%;
 }
+.requirements{
+  margin-top: 100px;
+}
 .requirements .th-p {
-  margin-top: 20px;
   font-size: var(--th-fs-h4);
 }
 .requirements .rq-btn {
@@ -1181,12 +1215,12 @@ transform: translateX(0%);
 /* Pricing Main Scetion Start ------------------------------ */
 #case-study-page .h2 {
   font-size: calc(var(--th-fs-h2)*.75);
-  font-family: var(--font-family-2);
+  font-family: var(--font-family);
   font-weight: 700;
   margin-bottom: 20px;
 }
 #case-study-page .th-p {
-  font-family: var(--font-family-2);
+  font-family: var(--font-family);
   font-size: var(--th-fs-h5);
 }
 #case-study-page .h4 {
@@ -1233,7 +1267,10 @@ background-color: #EFF4F8;
 background-color: #FEEEE6;
 }
 .challenge.tiles-center {
-background-color: #003068;
+/* background-color: ; */
+background: url(../image/case-study/3/case-hero-bg.png);
+            background-position: center center;
+            /* background-size: cover; */
 }
 .challenge.c-suite-impact {
 background-color: #F8FBF4;
@@ -1241,6 +1278,7 @@ background-color: #F8FBF4;
 .challenge.tiles-center .h4,
 .challenge.tiles-center .th-p{
 color: var(--th-color-5);
+font-family: var(--font-family);
 }
 .challenge .h4 {
   font-weight: 700;
