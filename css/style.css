@@ -783,6 +783,7 @@ animate:animate-svg-stroke-1 2s linear forwards;
   border-bottom: 2px solid var(--th-color-4);
   padding: 10px 0px;
   background-color: transparent;
+  font-family: var(--font-family) !important;
 }
 .write-to-us input::placeholder {
   font-size: 16px;
