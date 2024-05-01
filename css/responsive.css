@@ -328,7 +328,7 @@
 
 @media screen and (max-width: 576px) {
   :root {
-    --th-fs-h1: calc(180px * 0.35);
+    --th-fs-h1: calc(180px * 0.3);
     --th-fs-h2: calc(100px * 0.32);
     --th-fs-h3: calc(40px * 0.65);
     --th-fs-h4: calc(32px * 0.6);
