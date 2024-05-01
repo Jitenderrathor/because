@@ -1192,6 +1192,8 @@ transform: translateX(0%);
   font-size: var(--th-fs-h5);
   font-weight: 700;
   line-height: 200%;
+  display: flex;
+  gap: 4px;
 }
 .requirements{
   margin-top: 100px;
