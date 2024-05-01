@@ -287,9 +287,6 @@ a {
 .th-mode.active .ball {
   transform: translateX(24px);
 }
-main {
-  /* padding-top: 100px; */
-}
 /* Header Scetion Start ------------------------------ */
 /* #header {
   background-color: white;
@@ -881,9 +878,7 @@ footer .f-text:hover .fas {
   max-width: 1200px;
   width: 100%;
 }
-.specialize-service{
-  /* position: relative; */
-}
+
 .ss-box {
   height: 530px;
   display: flex;
@@ -1103,9 +1098,6 @@ right: 30px;
 /* Pricing Main Scetion Start ------------------------------ */
 .pricing-main {
   padding: 180px 0px 0px 0px;
-}
-.pm-box {
-  /* margin-bottom: 200px; */
 }
 .pm-box .pmb-3 {
   padding: 80px 60px;

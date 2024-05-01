@@ -12,7 +12,9 @@ AOS.init();
 $(window).on('load', function () {
     // Get the body's ID
     var bodyId = $('body').attr('id');
-
+    if(bodyId == "case-study-page"){
+        bodyId = "project-page"
+    }
     // Add active class to data-nav-item with matching value
     $('[data-nav-item="' + bodyId + '"]').addClass('active');
 
