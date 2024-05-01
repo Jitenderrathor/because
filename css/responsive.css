@@ -322,6 +322,9 @@
   .get-in-touch{
     padding: 20px !important;
   }
+  .csh-img #youtube {
+    height: 450px;
+}
 }
 
 /* Small devices (576px and down) */
@@ -524,4 +527,7 @@ height: 200px;
     gap: 15px;
     margin-bottom: 20px;
   }
+  .csh-img #youtube {
+    height: 300px;
+}
 }
