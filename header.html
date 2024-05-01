@@ -34,9 +34,21 @@
             var scrolled = (scroll / height) * 100;
             $('#myBar').width(scrolled + "%");
         });
-        $("#header .fa-times, #header .fa-bars").click(function(){
+        $("#header .fa-times, #header .fa-bars").click(function () {
             $(".header-bottom").toggleClass("active");
         })
+        if (window.innerWidth <= 768) {
+            $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if(scroll>=80){
+                $(".header-top").addClass("sticky");
+                $(".ht-left img").fadeOut();
+            } else{
+                $(".header-top").removeClass("sticky");
+                $(".ht-left img").fadeIn();
+            }
+        });
+        }
     });
 
 </script>
