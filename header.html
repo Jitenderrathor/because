@@ -15,13 +15,16 @@
     <div class="hb-container d-sm-flex justify-content-between align-items-center">
         <div class="hb-box hb-mid">
             <ul class="list-unstyled p-0 m-0 d-sm-flex justify-content-between align-items-center">
-                <li class="nav-item me-4 d-none d-sm-inline"><a href="index.html" data-nav-item="home-page"><img
-                            src="image/logo.png" class="w-100" alt=""></a></li>
-                <li class="nav-item"><a href="project.html" data-nav-item="project-page">Projects</a></li>
-                <li class="nav-item"><a href="about.html" data-nav-item="about-page">About</a></li>
+                <li class="nav-item me-4 d-none d-sm-inline">
+                    <a href="index.html" data-nav-item="home-page">
+                        <img src="image/logo.png" class="w-100" alt="">
+                    </a>
+                </li>
                 <li class="nav-item"><a href="service.html" data-nav-item="service-page">Services</a></li>
-                <li class="nav-item"><a href="contact.html" data-nav-item="contact-page">Contact</a></li>
+                <li class="nav-item"><a href="project.html" data-nav-item="project-page">Projects</a></li>
                 <li class="nav-item"><a href="pricing.html" data-nav-item="pricing-page">Pricing</a></li>
+                <li class="nav-item"><a href="about.html" data-nav-item="about-page">About</a></li>
+                <li class="nav-item"><a href="contact.html" data-nav-item="contact-page">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -39,15 +42,15 @@
         })
         if (window.innerWidth <= 768) {
             $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            if(scroll>=80){
-                $(".header-top").addClass("sticky");
-                $(".ht-left img").fadeOut();
-            } else{
-                $(".header-top").removeClass("sticky");
-                $(".ht-left img").fadeIn();
-            }
-        });
+                var scroll = $(window).scrollTop();
+                if (scroll >= 80) {
+                    $(".header-top").addClass("sticky");
+                    $(".ht-left img").fadeOut();
+                } else {
+                    $(".header-top").removeClass("sticky");
+                    $(".ht-left img").fadeIn();
+                }
+            });
         }
     });
 
